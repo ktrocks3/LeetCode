@@ -59,9 +59,9 @@ class Solution:
         return bin(sum_int)[2:]
 
 
-assert Solution().addBinary("11", "1") == "100", \
-    f"Expected: 100, Actual: {Solution().addBinary("11", "1")}"
-assert Solution().addBinary("1010", "1011") == "10101", \
-    f"Expected: 10101, Actual: {Solution().addBinary("1010", "1011")}"
-assert Solution().addBinary("1111", "1111") == "11110", \
-    f"Expected: 11110, Actual: {Solution().addBinary("1111", "1111")}"
+assert Solution().addBinary1("11", "1") == "100", \
+    f"Expected: 100, Actual: {Solution().addBinary1("11", "1")}"
+assert Solution().addBinary2("1010", "1011") == "10101", \
+    f"Expected: 10101, Actual: {Solution().addBinary2("1010", "1011")}"
+assert Solution().addBinary3("1111", "1111") == "11110", \
+    f"Expected: 11110, Actual: {Solution().addBinary3("1111", "1111")}"
