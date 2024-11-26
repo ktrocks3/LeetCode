@@ -34,12 +34,16 @@ def parse_input(input_string):
 
 def formatLC(in_out: str, name: str):
     input_string, out = in_out.split('\n')
-    out = out[7:]
+    out = out[7:].strip()
+    if out == "true":
+        out = "True"
+    if out == "false":
+        out = "False"
     parsed_values = str(parse_input(input_string))
     makeAssertion(name, parsed_values, out)
 
 
-formatLC("""Input: n = 3, edges = [[0,1],[1,2]]
-Output: 0""", 'findChampion')
-formatLC("""Input: n = 4, edges = [[0,2],[1,3],[1,2]]
-Output: -1""", 'findChampion')
+formatLC("""Input: stones = [0,1,3,5,6,8,12,17]
+Output: true""", 'canCross')
+formatLC("""Input: stones = [0,1,2,3,4,8,9,11]
+Output: false""", 'canCross')
