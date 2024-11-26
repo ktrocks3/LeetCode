@@ -43,7 +43,7 @@ def formatLC(in_out: str, name: str):
     makeAssertion(name, parsed_values, out)
 
 
-formatLC("""Input: stones = [0,1,3,5,6,8,12,17]
-Output: true""", 'canCross')
-formatLC("""Input: stones = [0,1,2,5,6,9,10,12,13,14,17,19,20,21,26,27,28,29,30]
-Output: false""", 'canCross')
+formatLC("""Input: word = "aba"
+Output: 4""", 'wonderfulSubstrings')
+formatLC("""Input: word = "he"
+Output: 2""", 'wonderfulSubstrings')
