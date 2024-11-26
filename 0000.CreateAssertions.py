@@ -45,5 +45,5 @@ def formatLC(in_out: str, name: str):
 
 formatLC("""Input: stones = [0,1,3,5,6,8,12,17]
 Output: true""", 'canCross')
-formatLC("""Input: stones = [0,1,2,3,4,8,9,11]
+formatLC("""Input: stones = [0,1,2,5,6,9,10,12,13,14,17,19,20,21,26,27,28,29,30]
 Output: false""", 'canCross')
