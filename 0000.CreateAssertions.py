@@ -50,8 +50,8 @@ def testcases(case: str, num: int):
         collected = []
         for j in range(num):
             collected.append(case[i + j])
-        collected = str(collected)
-        print(f'Solution().{name}({collected[1:len(collected) - 1]})')
+        collected = ','.join(collected)
+        print(f'Solution().{name}({collected})')
 
 
 name = "shortestDistanceAfterQueries"
@@ -59,6 +59,8 @@ formatLC("""Input: n = 5, queries = [[2,4],[0,2],[0,4]]
 Output: [3,2,1]""")
 formatLC("""Input: n = 4, queries = [[0,3],[0,2]]
 Output: [1,1]""")
+formatLC("""Input: n = 14, queries = [[0,6], [4,12]]
+Output: [8,6]""")
 testcases("""15
 [[10,12],[6,12]]
 14
