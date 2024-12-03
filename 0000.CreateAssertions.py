@@ -54,27 +54,27 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "isPrefixOfWord"
-formatLC("""Input: sentence = "i love eating burger", searchWord = "burg"
-Output: 4""")
-formatLC("""Input: sentence = "this problem is an easy problem", searchWord = "pro"
-Output: 2""")
-formatLC("""Input: sentence = "i am tired", searchWord = "you"
-Output: -1""")
-testcases(""""i love eating bunburger burger"
-"burg"
-"hellohello hellohellohello"
-"ello"
-"i love eating broadburgers"
-"burg"
-"love i love eating bunburger burger"
-"i"
-"helloh hellohe"
-"hellohe"
-"winstontang love they i pillow jonathan you winstontang pillow dream you duck"
-"p"
-"love"
-"lov"
-"hello from the other side"
-"they" """,
+name = "addSpaces"
+formatLC("""Input: s = "LeetcodeHelpsMeLearn", spaces = [8,13,15]
+Output: "Leetcode Helps Me Learn" """)
+formatLC("""Input: s = "icodeinpython", spaces = [1,5,7,9]
+Output: "i code in py thon" """)
+formatLC("""Input: s = "spacing", spaces = [0,1,2,3,4,5,6]
+Output: " s p a c i n g" """)
+testcases(""""LeetcodeHelpsMeLearn"
+[8,13,15]
+"icodeincpp"
+[1,5,7,9]
+"spacing"
+[0,1,2,3,4,5,6]
+"AllEyesOnHindu"
+[7]
+"MakeIndiaGreatAgain"
+[1,7,8,9]
+"DelhiMeiBJP"
+[8,9]
+"HinduMeansIndian"
+[9,11]
+"jaimatadi"
+[7,8] """,
           2)
