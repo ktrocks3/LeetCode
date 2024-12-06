@@ -34,14 +34,18 @@ def parse_input(input_string):
 
 
 def formatLC(in_out: str):
-    input_string, out = in_out.split('\n')
-    out = out[7:].strip()
-    if out == "true":
-        out = "True"
-    if out == "false":
-        out = "False"
-    parsed_values = str(parse_input(input_string))
-    makeAssertion(parsed_values, out)
+    in_out = in_out.split('\n')
+    for i in range(len(in_out)):
+        if in_out[i].startswith('Input:'):
+            input_string, out = in_out[i], in_out[i+1]
+            i += 1
+            out = out[7:].strip()
+            if out == "true":
+                out = "True"
+            if out == "false":
+                out = "False"
+            parsed_values = str(parse_input(input_string))
+            makeAssertion(parsed_values, out)
 
 
 def testcases(case: str, num: int):
@@ -54,13 +58,24 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "canChange"
-formatLC("""Input: start = "_L__R__R_", target = "L______RR"
-Output: true""")
-formatLC("""Input: start = "R_L_", target = "__LR"
-Output: false""")
-formatLC("""Input: start = "_R", target = "R_"
-Output: false""")
+name = "maxCount"
+formatLC("""Example 1:
+
+Input: banned = [1,6,5], n = 5, maxSum = 6
+Output: 2
+Explanation: You can choose the integers 2 and 4.
+2 and 4 are from the range [1, 5], both did not appear in banned, and their sum is 6, which did not exceed maxSum.
+Example 2:
+
+Input: banned = [1,2,3,4,5,6,7], n = 8, maxSum = 1
+Output: 0
+Explanation: You cannot choose any integer while following the mentioned conditions.
+Example 3:
+
+Input: banned = [11], n = 7, maxSum = 50
+Output: 7
+Explanation: You can choose the integers 1, 2, 3, 4, 5, 6, and 7.
+They are from the range [1, 7], all did not appear in banned, and their sum is 28, which did not exceed maxSum.""")
 testcases("""""LL_R"
 "L_RR"
 "R_L_"
