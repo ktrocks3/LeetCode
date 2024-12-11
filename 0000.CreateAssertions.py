@@ -54,23 +54,31 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "isArraySpecial"
+name = "maximumLength"
 formatLC("""Example 1:
 
-Input: nums = [3,4,1,2,6], queries = [[0,4]]
-
-Output: [false]
-
-Explanation:
-
-The subarray is [3,4,1,2,6]. 2 and 6 are both even.
-
+Input: s = "aaaa"
+Output: 2
+Explanation: The longest special substring which occurs thrice is "aa": substrings "aaaa", "aaaa", and "aaaa".
+It can be shown that the maximum length achievable is 2.
 Example 2:
 
-Input: nums = [4,3,1,6], queries = [[0,2],[2,3]]
+Input: s = "abcdef"
+Output: -1
+Explanation: There exists no special substring which occurs at least thrice. Hence return -1.
+Example 3:
 
-Output: [false,true]""")
-testcases("""[586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586]
-[586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823,586,1823]
+Input: s = "abcaba"
+Output: 1
+Explanation: The longest special substring which occurs thrice is "a": substrings "abcaba", "abcaba", and "abcaba".
+It can be shown that the maximum length achievable is 1.""")
+testcases(""""acc"
+"aaa"
+"abcccccddddabcccccddddabcccccdddd"
+"jinhhhtttttttefffffjjjjjjjjjfffffjjjjjjjjjzvvvvvvg"
+"aaaaaaaaaaaaccccccccccccccccccccccccccaaaaaaaaaaaa"
+"aaaaaaaaaaaaaaaaaaaabbbbbbbbbbaaaaaaaaaaaaaaaaaaaa"
+"zzzzzzzzzzzzzzzzzfffffdddddddddiiiiiiiiiiiiiiiiiii"
+"zzzzzzzzzzzsssssssssssssssssqppppppppppppppnqmosat"
 """,
-          2)
+          1)
