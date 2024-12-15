@@ -54,29 +54,16 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "findScore"
+name = "maxAverageRatio"
 formatLC("""Example 1:
 
-Input: nums = [5,4,2,4]
-Output: 8
-Explanation: 
-Continuous subarray of size 1: [5], [4], [2], [4].
-Continuous subarray of size 2: [5,4], [4,2], [2,4].
-Continuous subarray of size 3: [4,2,4].
-Thereare no subarrys of size 4.
-Total continuous subarrays = 4 + 3 + 1 = 8.
-It can be shown that there are no more continuous subarrays.
- 
-
+Input: classes = [[1,2],[3,5],[2,2]], extraStudents = 2
+Output: 0.78333
+Explanation: You can assign the two extra students to the first class. The average pass ratio will be equal to (3/4 + 3/5 + 2/2) / 3 = 0.78333.
 Example 2:
 
-Input: nums = [1,2,3]
-Output: 6
-Explanation: 
-Continuous subarray of size 1: [1], [2], [3].
-Continuous subarray of size 2: [1,2], [2,3].
-Continuous subarray of size 3: [1,2,3].
-Total continuous subarrays = 3 + 2 + 1 = 6.
+Input: classes = [[2,4],[3,9],[4,5],[2,10]], extraStudents = 4
+Output: 0.53485
  """)
 testcases(""" """,
-          1)
+          2)
