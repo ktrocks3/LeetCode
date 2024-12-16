@@ -54,16 +54,26 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxAverageRatio"
+name = "getFinalState"
 formatLC("""Example 1:
 
-Input: classes = [[1,2],[3,5],[2,2]], extraStudents = 2
-Output: 0.78333
-Explanation: You can assign the two extra students to the first class. The average pass ratio will be equal to (3/4 + 3/5 + 2/2) / 3 = 0.78333.
+Input: nums = [2,1,3,5,6], k = 5, multiplier = 2
+
+Output: [8,4,6,5,6]
+
+Explanation:
+
+Operation	Result
+After operation 1	[2, 2, 3, 5, 6]
+After operation 2	[4, 2, 3, 5, 6]
+After operation 3	[4, 4, 3, 5, 6]
+After operation 4	[4, 4, 6, 5, 6]
+After operation 5	[8, 4, 6, 5, 6]
 Example 2:
 
-Input: classes = [[2,4],[3,9],[4,5],[2,10]], extraStudents = 4
-Output: 0.53485
+Input: nums = [1,2], k = 3, multiplier = 4
+
+Output: [16,8]
  """)
 testcases(""" """,
           2)
