@@ -54,26 +54,28 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "getFinalState"
+name = "repeatLimitedString"
 formatLC("""Example 1:
 
-Input: nums = [2,1,3,5,6], k = 5, multiplier = 2
-
-Output: [8,4,6,5,6]
-
-Explanation:
-
-Operation	Result
-After operation 1	[2, 2, 3, 5, 6]
-After operation 2	[4, 2, 3, 5, 6]
-After operation 3	[4, 4, 3, 5, 6]
-After operation 4	[4, 4, 6, 5, 6]
-After operation 5	[8, 4, 6, 5, 6]
+Input: s = "cczazcc", repeatLimit = 3
+Output: "zzcccac"
+Explanation: We use all of the characters from s to construct the repeatLimitedString "zzcccac".
+The letter 'a' appears at most 1 time in a row.
+The letter 'c' appears at most 3 times in a row.
+The letter 'z' appears at most 2 times in a row.
+Hence, no letter appears more than repeatLimit times in a row and the string is a valid repeatLimitedString.
+The string is the lexicographically largest repeatLimitedString possible so we return "zzcccac".
+Note that the string "zzcccca" is lexicographically larger but the letter 'c' appears more than 3 times in a row, so it is not a valid repeatLimitedString.
 Example 2:
 
-Input: nums = [1,2], k = 3, multiplier = 4
-
-Output: [16,8]
+Input: s = "aababab", repeatLimit = 2
+Output: "bbabaa"
+Explanation: We use only some of the characters from s to construct the repeatLimitedString "bbabaa". 
+The letter 'a' appears at most 2 times in a row.
+The letter 'b' appears at most 2 times in a row.
+Hence, no letter appears more than repeatLimit times in a row and the string is a valid repeatLimitedString.
+The string is the lexicographically largest repeatLimitedString possible so we return "bbabaa".
+Note that the string "bbabaaa" is lexicographically larger but the letter 'a' appears more than 2 times in a row, so it is not a valid repeatLimitedString.
  """)
 testcases(""" """,
           2)
