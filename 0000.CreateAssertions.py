@@ -54,28 +54,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "repeatLimitedString"
+name = "finalPrices"
 formatLC("""Example 1:
 
-Input: s = "cczazcc", repeatLimit = 3
-Output: "zzcccac"
-Explanation: We use all of the characters from s to construct the repeatLimitedString "zzcccac".
-The letter 'a' appears at most 1 time in a row.
-The letter 'c' appears at most 3 times in a row.
-The letter 'z' appears at most 2 times in a row.
-Hence, no letter appears more than repeatLimit times in a row and the string is a valid repeatLimitedString.
-The string is the lexicographically largest repeatLimitedString possible so we return "zzcccac".
-Note that the string "zzcccca" is lexicographically larger but the letter 'c' appears more than 3 times in a row, so it is not a valid repeatLimitedString.
+Input: prices = [8,4,6,2,3]
+Output: [4,2,4,2,3]
+Explanation: 
+For item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4.
+For item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2.
+For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.
+For items 3 and 4 you will not receive any discount at all.
 Example 2:
 
-Input: s = "aababab", repeatLimit = 2
-Output: "bbabaa"
-Explanation: We use only some of the characters from s to construct the repeatLimitedString "bbabaa". 
-The letter 'a' appears at most 2 times in a row.
-The letter 'b' appears at most 2 times in a row.
-Hence, no letter appears more than repeatLimit times in a row and the string is a valid repeatLimitedString.
-The string is the lexicographically largest repeatLimitedString possible so we return "bbabaa".
-Note that the string "bbabaaa" is lexicographically larger but the letter 'a' appears more than 2 times in a row, so it is not a valid repeatLimitedString.
+Input: prices = [1,2,3,4,5]
+Output: [1,2,3,4,5]
+Explanation: In this case, for all items, you will not receive any discount at all.
+Example 3:
+
+Input: prices = [10,1,1,6]
+Output: [9,0,1,6]
  """)
 testcases(""" """,
           2)
