@@ -54,21 +54,15 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxChunksToSorted"
-formatLC("""Example 1:
+name = "reverseOddLevels"
+formatLC("""Input: root = [2,3,5,8,13,21,34]
+Output: [2,5,3,8,13,21,34]
 
-Input: arr = [4,3,2,1,0]
-Output: 1
-Explanation:
-Splitting into two or more chunks will not return the required result.
-For example, splitting into [4, 3], [2, 1, 0] will result in [3, 4, 0, 1, 2], which isn't sorted.
-Example 2:
+Input: root = [7,13,11]
+Output: [7,11,13]
 
-Input: arr = [1,0,2,3,4]
-Output: 4
-Explanation:
-We can split into two chunks, such as [1, 0], [2, 3, 4].
-However, splitting into [1, 0], [2], [3], [4] is the highest number of chunks possible.
+Input: root = [0,1,2,0,0,0,0,1,1,1,1,2,2,2,2]
+Output: [0,2,1,0,0,0,0,2,2,2,2,1,1,1,1]
  """)
 testcases(""" """,
           2)
