@@ -1,7 +1,15 @@
 def makeAssertion(args: str, sol: str):
     global name
-    print(f'assert Solution().{name}({args[1:len(args) - 1]}) == {sol}, \\'
-          f'\n  f\'Expected: {sol}, Received: {{Solution().{name}({args[1:len(args) - 1]})}}\'')
+    if func == "":
+        print(f'assert Solution().{name}({args[1:len(args) - 1]}) == {sol}, \\'
+              f'\n  f\'Expected: {sol}, Received: {{Solution().{name}({args[1:len(args) - 1]})}}\'')
+    elif func2 == "":
+        print(f'assert Solution().{name}({func}({args[1:len(args) - 1]})) == {sol}, \\'
+              f'\n  f\'Expected: {sol}, Received: {{Solution().{name}({func}({args[1:len(args) - 1]}))}}\'')
+    else:
+        print(f'assert {func2}(Solution().{name}({func}({args[1:len(args) - 1]}))) == {sol}, \\'
+              f'\n  f\'Expected: {sol}, Received: {func2}({{Solution().{name}({func}({args[1:len(args) - 1]}))}})\'')
+
 
 
 def parse_input(input_string):
@@ -26,14 +34,14 @@ def parse_input(input_string):
         values.append(buffer.split("=", 1)[1].strip())
 
     # Evaluate the captured values to convert strings to lists, ints, etc.
-    return [eval(value) for value in values]
+    return [eval(value.replace('null', 'None')) for value in values]
 
 
 def formatLC(in_out: str):
     in_out = in_out.split('\n')
     for i in range(len(in_out)):
         if in_out[i].startswith('Input:'):
-            input_string, out = in_out[i], in_out[i+1]
+            input_string, out = in_out[i], in_out[i + 1]
             i += 1
             out = out[7:].strip()
             if out == "true":
@@ -54,30 +62,42 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "leftmostBuildingQueries"
+name = "minimumOperations"
+func = "convertArr"
+func2 = ""
 formatLC("""Example 1:
 
-Input: heights = [6,4,8,5,2,7], queries = [[0,1],[0,3],[2,4],[3,4],[2,2]]
-Output: [2,5,-1,5,2]
-Explanation: In the first query, Alice and Bob can move to building 2 since heights[0] < heights[2] and heights[1] < heights[2]. 
-In the second query, Alice and Bob can move to building 5 since heights[0] < heights[5] and heights[3] < heights[5]. 
-In the third query, Alice cannot meet Bob since Alice cannot move to any other building.
-In the fourth query, Alice and Bob can move to building 5 since heights[3] < heights[5] and heights[4] < heights[5].
-In the fifth query, Alice and Bob are already in the same building.  
-For ans[i] != -1, It can be shown that ans[i] is the leftmost building where Alice and Bob can meet.
-For ans[i] == -1, It can be shown that there is no building where Alice and Bob can meet.
+
+Input: root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]
+Output: 3
+Explanation:
+- Swap 4 and 3. The 2nd level becomes [3,4].
+- Swap 7 and 5. The 3rd level becomes [5,6,8,7].
+- Swap 8 and 7. The 3rd level becomes [5,6,7,8].
+We used 3 operations so return 3.
+It can be proven that 3 is the minimum number of operations needed.
 Example 2:
 
-Input: heights = [5,3,8,2,6,1,4,6], queries = [[0,7],[3,5],[5,2],[3,0],[1,6]]
-Output: [7,6,-1,4,6]
-Explanation: In the first query, Alice can directly move to Bob's building since heights[0] < heights[7].
-In the second query, Alice and Bob can move to building 6 since heights[3] < heights[6] and heights[5] < heights[6].
-In the third query, Alice cannot meet Bob since Bob cannot move to any other building.
-In the fourth query, Alice and Bob can move to building 4 since heights[3] < heights[4] and heights[0] < heights[4].
-In the fifth query, Alice can directly move to Bob's building since heights[1] < heights[6].
-For ans[i] != -1, It can be shown that ans[i] is the leftmost building where Alice and Bob can meet.
-For ans[i] == -1, It can be shown that there is no building where Alice and Bob can meet.
 
+Input: root = [1,3,2,7,6,5,4]
+Output: 3
+Explanation:
+- Swap 3 and 2. The 2nd level becomes [2,3].
+- Swap 7 and 4. The 3rd level becomes [4,6,5,7].
+- Swap 6 and 5. The 3rd level becomes [4,5,6,7].
+We used 3 operations so return 3.
+It can be proven that 3 is the minimum number of operations needed.
+Example 3:
+
+
+Input: root = [1,2,3,4,5,6]
+Output: 0
  """)
-testcases(""" """,
+testcases("""[5,4,null,8,null,null,1]
+[1,3,null,null,4,null,5]
+[50,38,30,45,null,1,null,null,31]
+[29,13,40,32,null,20,null,null,null,49,21,50,null,null,null,1]
+[370,108,365,235,447,301,26,311,259,null,null,null,null,null,21,null,null,null,274,352,null,null,null,401,467]
+[78,88,76,null,137,212,397,null,169,311,27,15,140,257,163,253,null,null,161,381,398,null,357,null,25,null,null,null,null,null,328,null,null,null,217,23,104,null,196,null,264,null,null,null,null,301,null,null,null,null,491,59,473,null,null,null,209,249,452,273,64,null,349,86,null,null,null,168,null,337,192,494,null,null,null,222,43]
+[789,637,24,321,247,81,171,285,367,null,null,69,478,483,76,46,454,null,437,1863,348,null,466,262,null,205,40,null,441,473,202,246,332,488,183,394,null,411,null,191,null,176,33,203,null,302,null,null,58,53,365,null,343,null,138,null,43,56,null,233,null,null,122,null,null,407,465,null,154,312,420,null,null,null,null,425,93,222,17,101,null,null,112,null,null,259,null,null,null,null,null,353,250,275,null,null,168,null,null,null,null,391,458,277,null,288,null,null,null,268,244,393,339,null,null,482,null,null,481,null,360,null,null,null,null,null,99,null,null,220,null,null,null,null,374,null,399,270,null,null,null,371,null,null,null,null,null,null,null,null,null,177,null,79]""",
           2)
