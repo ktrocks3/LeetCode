@@ -4,6 +4,9 @@ class TreeNode:
         self.left = left
         self.right = right
 
+    def __str__(self):
+        return f"TreeNode(val={self.val}, left={self.left.val if self.left else None}, right={self.right.val if self.right else None})"
+
 
 def convertArr(arr) -> TreeNode:
     if not arr:
@@ -28,7 +31,6 @@ def convertArr(arr) -> TreeNode:
     return root
 
 
-
 def convertTree(root: TreeNode) -> list:
     if not root:
         return []
@@ -46,6 +48,3 @@ def convertTree(root: TreeNode) -> list:
             queue.append(current.right)
 
     return result
-
-
-
