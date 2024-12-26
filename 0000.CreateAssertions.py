@@ -62,16 +62,23 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "largestValues"
-func = "convertArr"
+name = "findTargetSumWays"
+func = ""
 func2 = ""
-formatLC("""
-Input: root = [1,3,2,5,3,null,9]
-Output: [1,3,9]
+formatLC("""Example 1:
+
+Input: nums = [1,1,1,1,1], target = 3
+Output: 5
+Explanation: There are 5 ways to assign symbols to make the sum of nums be target 3.
+-1 + 1 + 1 + 1 + 1 = 3
++1 - 1 + 1 + 1 + 1 = 3
++1 + 1 - 1 + 1 + 1 = 3
++1 + 1 + 1 - 1 + 1 = 3
++1 + 1 + 1 + 1 - 1 = 3
 Example 2:
 
-Input: root = [1,2,3]
-Output: [1,3]
+Input: nums = [1], target = 1
+Output: 1
  """)
 testcases("""[5,4,null,8,null,null,1]
 [1,3,null,null,4,null,5]
