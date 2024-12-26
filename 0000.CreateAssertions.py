@@ -62,25 +62,16 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "minimumDiameterAfterMerge"
-func = ""
+name = "largestValues"
+func = "convertArr"
 func2 = ""
 formatLC("""
-Input: edges1 = [[0,1],[0,2],[0,3]], edges2 = [[0,1]]
-Output: 3
-
-Explanation:
-
-We can obtain a tree of diameter 3 by connecting node 0 from the first tree with any node from the second tree.
-
+Input: root = [1,3,2,5,3,null,9]
+Output: [1,3,9]
 Example 2:
 
-
-Input: edges1 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]], edges2 = [[0,1],[0,2],[0,3],[2,4],[2,5],[3,6],[2,7]]
-Output: 5
-
-Input: edges1 = [[0,1],[2,0],[3,2],[3,6],[8,7],[4,8],[5,4],[3,5],[3,9]], edges2 = [[0,1],[0,2],[0,3]]
-Output: 7
+Input: root = [1,2,3]
+Output: [1,3]
  """)
 testcases("""[5,4,null,8,null,null,1]
 [1,3,null,null,4,null,5]
