@@ -62,23 +62,19 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "findTargetSumWays"
+name = "maxScoreSightseeingPair"
 func = ""
 func2 = ""
 formatLC("""Example 1:
 
-Input: nums = [1,1,1,1,1], target = 3
-Output: 5
-Explanation: There are 5 ways to assign symbols to make the sum of nums be target 3.
--1 + 1 + 1 + 1 + 1 = 3
-+1 - 1 + 1 + 1 + 1 = 3
-+1 + 1 - 1 + 1 + 1 = 3
-+1 + 1 + 1 - 1 + 1 = 3
-+1 + 1 + 1 + 1 - 1 = 3
+Input: values = [8,1,5,2,6]
+Output: 11
+Explanation: i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11
 Example 2:
 
-Input: nums = [1], target = 1
-Output: 1
+Input: values = [1,2]
+Output: 2
+ 
  """)
 testcases("""[5,4,null,8,null,null,1]
 [1,3,null,null,4,null,5]
