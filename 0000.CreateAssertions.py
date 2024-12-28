@@ -62,25 +62,20 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxScoreSightseeingPair"
+name = "maxSumOfThreeSubarrays"
 func = ""
 func2 = ""
 formatLC("""Example 1:
 
-Input: values = [8,1,5,2,6]
-Output: 11
-Explanation: i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11
+Input: nums = [1,2,1,2,6,7,5,1], k = 2
+Output: [0,3,5]
+Explanation: Subarrays [1, 2], [2, 6], [7, 5] correspond to the starting indices [0, 3, 5].
+We could have also taken [2, 1], but an answer of [1, 3, 5] would be lexicographically larger.
 Example 2:
 
-Input: values = [1,2]
-Output: 2
+Input: nums = [1,2,1,2,1,2,1,2,1], k = 2
+Output: [0,2,4]
+ 
  
  """)
-testcases("""[5,4,null,8,null,null,1]
-[1,3,null,null,4,null,5]
-[50,38,30,45,null,1,null,null,31]
-[29,13,40,32,null,20,null,null,null,49,21,50,null,null,null,1]
-[370,108,365,235,447,301,26,311,259,null,null,null,null,null,21,null,null,null,274,352,null,null,null,401,467]
-[78,88,76,null,137,212,397,null,169,311,27,15,140,257,163,253,null,null,161,381,398,null,357,null,25,null,null,null,null,null,328,null,null,null,217,23,104,null,196,null,264,null,null,null,null,301,null,null,null,null,491,59,473,null,null,null,209,249,452,273,64,null,349,86,null,null,null,168,null,337,192,494,null,null,null,222,43]
-[789,637,24,321,247,81,171,285,367,null,null,69,478,483,76,46,454,null,437,1863,348,null,466,262,null,205,40,null,441,473,202,246,332,488,183,394,null,411,null,191,null,176,33,203,null,302,null,null,58,53,365,null,343,null,138,null,43,56,null,233,null,null,122,null,null,407,465,null,154,312,420,null,null,null,null,425,93,222,17,101,null,null,112,null,null,259,null,null,null,null,null,353,250,275,null,null,168,null,null,null,null,391,458,277,null,288,null,null,null,268,244,393,339,null,null,482,null,null,481,null,360,null,null,null,null,null,99,null,null,220,null,null,null,null,374,null,399,270,null,null,null,371,null,null,null,null,null,null,null,null,null,177,null,79]""",
-          2)
+# testcases(""" """", 0)
