@@ -67,14 +67,24 @@ func = ""
 func2 = ""
 formatLC("""Example 1:
 
-Input: nums = [1,2,1,2,6,7,5,1], k = 2
-Output: [0,3,5]
-Explanation: Subarrays [1, 2], [2, 6], [7, 5] correspond to the starting indices [0, 3, 5].
-We could have also taken [2, 1], but an answer of [1, 3, 5] would be lexicographically larger.
+Input: words = ["acca","bbbb","caca"], target = "aba"
+Output: 6
+Explanation: There are 6 ways to form target.
+"aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("caca")
+"aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("caca")
+"aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("acca")
+"aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("acca")
+"aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("acca")
+"aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("caca")
 Example 2:
 
-Input: nums = [1,2,1,2,1,2,1,2,1], k = 2
-Output: [0,2,4]
+Input: words = ["abba","baab"], target = "bab"
+Output: 4
+Explanation: There are 4 ways to form target.
+"bab" -> index 0 ("baab"), index 1 ("baab"), index 2 ("abba")
+"bab" -> index 0 ("baab"), index 1 ("baab"), index 3 ("baab")
+"bab" -> index 0 ("baab"), index 2 ("baab"), index 3 ("baab")
+"bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab")
  
  
  """)
