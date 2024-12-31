@@ -62,30 +62,22 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxSumOfThreeSubarrays"
+name = "countGoodStrings"
 func = ""
 func2 = ""
 formatLC("""Example 1:
 
-Input: words = ["acca","bbbb","caca"], target = "aba"
-Output: 6
-Explanation: There are 6 ways to form target.
-"aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("caca")
-"aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("caca")
-"aba" -> index 0 ("acca"), index 1 ("bbbb"), index 3 ("acca")
-"aba" -> index 0 ("acca"), index 2 ("bbbb"), index 3 ("acca")
-"aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("acca")
-"aba" -> index 1 ("caca"), index 2 ("bbbb"), index 3 ("caca")
+Input: low = 3, high = 3, zero = 1, one = 1
+Output: 8
+Explanation: 
+One possible valid good string is "011". 
+It can be constructed as follows: "" -> "0" -> "01" -> "011". 
+All binary strings from "000" to "111" are good strings in this example.
 Example 2:
 
-Input: words = ["abba","baab"], target = "bab"
-Output: 4
-Explanation: There are 4 ways to form target.
-"bab" -> index 0 ("baab"), index 1 ("baab"), index 2 ("abba")
-"bab" -> index 0 ("baab"), index 1 ("baab"), index 3 ("baab")
-"bab" -> index 0 ("baab"), index 2 ("baab"), index 3 ("baab")
-"bab" -> index 1 ("abba"), index 2 ("baab"), index 3 ("baab")
- 
+Input: low = 2, high = 3, zero = 1, one = 2
+Output: 5
+Explanation: The good strings are "00", "11", "000", "110", and "011".
  
  """)
 # testcases(""" """", 0)
