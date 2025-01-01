@@ -62,21 +62,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "mincostTickets"
+name = "maxScore"
 func = ""
 func2 = ""
-formatLC("""Example 1:
+formatLC("""
+Example 1:
 
-Input: days = [1,4,6,7,8,20], costs = [2,7,15]
-Output: 11
-Explanation: For example, here is one way to buy passes that lets you travel your travel plan:
-On day 1, you bought a 1-day pass for costs[0] = $2, which covered day 1.
-On day 3, you bought a 7-day pass for costs[1] = $7, which covered days 3, 4, ..., 9.
-On day 20, you bought a 1-day pass for costs[0] = $2, which covered day 20.
-In total, you spent $11 and covered all the days of your travel.
+Input: s = "011101"
+Output: 5 
+Explanation: 
+All possible ways of splitting s into two non-empty substrings are:
+left = "0" and right = "11101", score = 1 + 4 = 5 
+left = "01" and right = "1101", score = 1 + 3 = 4 
+left = "011" and right = "101", score = 1 + 2 = 3 
+left = "0111" and right = "01", score = 1 + 1 = 2 
+left = "01110" and right = "1", score = 2 + 1 = 3
 Example 2:
 
-Input: days = [1,2,3,4,5,6,7,8,9,10,30,31], costs = [2,7,15]
-Output: 17
+Input: s = "00111"
+Output: 5
+Explanation: When left = "00" and right = "111", we get the maximum score = 2 + 3 = 5
  """)
 # testcases(""" """", 0)
