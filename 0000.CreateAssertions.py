@@ -62,22 +62,21 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "countGoodStrings"
+name = "mincostTickets"
 func = ""
 func2 = ""
 formatLC("""Example 1:
 
-Input: low = 3, high = 3, zero = 1, one = 1
-Output: 8
-Explanation: 
-One possible valid good string is "011". 
-It can be constructed as follows: "" -> "0" -> "01" -> "011". 
-All binary strings from "000" to "111" are good strings in this example.
+Input: days = [1,4,6,7,8,20], costs = [2,7,15]
+Output: 11
+Explanation: For example, here is one way to buy passes that lets you travel your travel plan:
+On day 1, you bought a 1-day pass for costs[0] = $2, which covered day 1.
+On day 3, you bought a 7-day pass for costs[1] = $7, which covered days 3, 4, ..., 9.
+On day 20, you bought a 1-day pass for costs[0] = $2, which covered day 20.
+In total, you spent $11 and covered all the days of your travel.
 Example 2:
 
-Input: low = 2, high = 3, zero = 1, one = 2
-Output: 5
-Explanation: The good strings are "00", "11", "000", "110", and "011".
- 
+Input: days = [1,2,3,4,5,6,7,8,9,10,30,31], costs = [2,7,15]
+Output: 17
  """)
 # testcases(""" """", 0)
