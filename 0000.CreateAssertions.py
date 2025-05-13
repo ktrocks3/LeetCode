@@ -66,18 +66,41 @@ name = "shiftingLetters"
 func = ""
 func2 = ""
 formatLC("""
-xample 1:
+Example 1:
 
-Input: s = "abc", shifts = [[0,1,0],[1,2,1],[0,2,1]]
-Output: "ace"
-Explanation: Firstly, shift the characters from index 0 to index 1 backward. Now s = "zac".
-Secondly, shift the characters from index 1 to index 2 forward. Now s = "zbd".
-Finally, shift the characters from index 0 to index 2 forward. Now s = "ace".
+Input: s = "abcyy", t = 2
+Output: 7
+
+Explanation:
+
+First Transformation (t = 1):
+'a' becomes 'b'
+'b' becomes 'c'
+'c' becomes 'd'
+'y' becomes 'z'
+'y' becomes 'z'
+String after the first transformation: "bcdzz"
+Second Transformation (t = 2):
+'b' becomes 'c'
+'c' becomes 'd'
+'d' becomes 'e'
+'z' becomes "ab"
+'z' becomes "ab"
+String after the second transformation: "cdeabab"
+Final Length of the string: The string is "cdeabab", which has 7 characters.
 Example 2:
 
-Input: s = "dztz", shifts = [[0,0,0],[1,1,1]]
-Output: "catz"
-Explanation: Firstly, shift the characters from index 0 to index 0 backward. Now s = "cztz".
-Finally, shift the characters from index 1 to index 1 forward. Now s = "catz".
+Input: s = "azbk", t = 1
+Output: 5
+
+Explanation:
+
+First Transformation (t = 1):
+'a' becomes 'b'
+'z' becomes "ab"
+'b' becomes 'c'
+'k' becomes 'l'
+String after the first transformation: "babcl"
+Final Length of the string: The string is "babcl", which has 5 characters.
   """)
 # testcases(""" """", 0)
