@@ -62,45 +62,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "shiftingLetters"
+name = "climbStairs"
 func = ""
 func2 = ""
 formatLC("""
+
 Example 1:
 
-Input: s = "abcyy", t = 2
-Output: 7
-
-Explanation:
-
-First Transformation (t = 1):
-'a' becomes 'b'
-'b' becomes 'c'
-'c' becomes 'd'
-'y' becomes 'z'
-'y' becomes 'z'
-String after the first transformation: "bcdzz"
-Second Transformation (t = 2):
-'b' becomes 'c'
-'c' becomes 'd'
-'d' becomes 'e'
-'z' becomes "ab"
-'z' becomes "ab"
-String after the second transformation: "cdeabab"
-Final Length of the string: The string is "cdeabab", which has 7 characters.
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
 Example 2:
 
-Input: s = "azbk", t = 1
-Output: 5
-
-Explanation:
-
-First Transformation (t = 1):
-'a' becomes 'b'
-'z' becomes "ab"
-'b' becomes 'c'
-'k' becomes 'l'
-String after the first transformation: "babcl"
-Final Length of the string: The string is "babcl", which has 5 characters.
+Input: n = 3
+Output: 3
+Explanation: There are three ways to climb to the top.
+1. 1 step + 1 step + 1 step
+2. 1 step + 2 steps
+3. 2 steps + 1 step
   """)
 # testcases(""" """", 0)
