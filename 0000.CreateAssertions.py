@@ -62,25 +62,22 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "climbStairs"
+name = "getLongestSubsequence"
 func = ""
 func2 = ""
 formatLC("""
-
 Example 1:
 
-Input: n = 2
-Output: 2
-Explanation: There are two ways to climb to the top.
-1. 1 step + 1 step
-2. 2 steps
+Input: words = ["e","a","b"], groups = [0,0,1]
+Output: ["e","b"]
+
+Explanation: A subsequence that can be selected is ["e","b"] because groups[0] != groups[2]. Another subsequence that can be selected is ["a","b"] because groups[1] != groups[2]. It can be demonstrated that the length of the longest subsequence of indices that satisfies the condition is 2.
+
 Example 2:
 
-Input: n = 3
-Output: 3
-Explanation: There are three ways to climb to the top.
-1. 1 step + 1 step + 1 step
-2. 1 step + 2 steps
-3. 2 steps + 1 step
+Input: words = ["a","b","c","d"], groups = [1,0,1,1]
+Output: ["a","b","c"]
+
+Explanation: A subsequence that can be selected is ["a","b","c"] because groups[0] != groups[1] and groups[1] != groups[2]. Another subsequence that can be selected is ["a","b","d"] because groups[0] != groups[1] and groups[1] != groups[3]. It can be shown that the length of the longest subsequence of indices that satisfies the condition is 3.
   """)
 # testcases(""" """", 0)
