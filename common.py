@@ -1,34 +1,40 @@
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
+        self.val   = val
+        self.left  = left
         self.right = right
 
     def __str__(self):
-        return f"TreeNode(val={self.val}, left={self.left.val if self.left else None}, right={self.right.val if self.right else None})"
-
+        left_val  = self.left.val  if self.left  else None
+        right_val = self.right.val if self.right else None
+        return f"TreeNode(val={self.val}, left={left_val}, right={right_val})"
 
 def convertArr(arr) -> TreeNode:
     if not arr:
         return None
 
-    root = TreeNode(arr[0])  # First element is the root
-    queue = [root]
-    i = 1
+    # 1) Build a parallel list of nodes, but leave None entries as None
+    nodes = [None if v is None else TreeNode(v) for v in arr]
 
-    # Use a queue to assign left and right children in a level-order manner
-    while i < len(arr):
-        current = queue.pop(0)
-        if i < len(arr):
-            current.left = TreeNode(arr[i])
-            queue.append(current.left)
-            i += 1
-        if i < len(arr):
-            current.right = TreeNode(arr[i])
-            queue.append(current.right)
-            i += 1
+    # 2) Now wire up children. We’ll walk through `nodes` with an index.
+    child_idx = 1
+    for parent in nodes:
+        if parent is None:
+            continue  # skip holes in the tree
 
-    return root
+        # assign left child
+        if child_idx < len(nodes):
+            parent.left = nodes[child_idx]
+            child_idx += 1
+
+        # assign right child
+        if child_idx < len(nodes):
+            parent.right = nodes[child_idx]
+            child_idx += 1
+
+    # the root is the first element
+    return nodes[0]
+
 
 
 def convertTree(root: TreeNode) -> list:
