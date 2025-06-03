@@ -62,19 +62,23 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "distributeCandies"
+name = "candy"
 func = ""
 func2 = ""
 formatLC("""
+
 Example 1:
 
-Input: n = 5, limit = 2
-Output: 3
-Explanation: There are 3 ways to distribute 5 candies such that no child gets more than 2 candies: (1, 2, 2), (2, 1, 2) and (2, 2, 1).
+Input: ratings = [1,0,2]
+Output: 5
+Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.
 Example 2:
 
-Input: n = 3, limit = 3
-Output: 10
-Explanation: There are 10 ways to distribute 3 candies such that no child gets more than 3 candies: (0, 0, 3), (0, 1, 2), (0, 2, 1), (0, 3, 0), (1, 0, 2), (1, 1, 1), (1, 2, 0), (2, 0, 1), (2, 1, 0) and (3, 0, 0).
-  """)
-# testcases(""" """", 0)
+Input: ratings = [1,2,2]
+Output: 4
+Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
+The third child gets 1 candy because it satisfies the above two conditions.
+   """)
+testcases(""" [100, 80, 70, 60, 70, 80, 90, 100, 90, 80, 70, 60, 60]
+[6, 7, 6, 5, 4, 3, 2, 1, 0, 0, 0, 1, 0]
+[20000, 20000, 16001, 16001, 16002, 16002, 16003, 16003, 16004, 16004, 16005, 16005, 16006, 16006, 16007, 16007, 16008, 16008, 16009, 16009, 16010, 16010, 16011, 16011, 16012, 16012, 16013, 16013, 16014, 16014, 16015, 16015, 16016, 16016, 16017, 16017, 16018, 16018, 16019, 16019, 16020, 16020, 16021, 16021, 16022, 16022, 16023, 16023, 16024, 16024]""", 1)
