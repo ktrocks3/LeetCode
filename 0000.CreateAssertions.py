@@ -62,24 +62,31 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxCandies"
+name = "answerString"
 func = ""
 func2 = ""
 formatLC("""
+
 Example 1:
 
-Input: status = [1,0,1,0], candies = [7,5,4,100], keys = [[],[],[1],[]], containedBoxes = [[1,2],[3],[],[]], initialBoxes = [0]
-Output: 16
-Explanation: You will be initially given box 0. You will find 7 candies in it and boxes 1 and 2.
-Box 1 is closed and you do not have a key for it so you will open box 2. You will find 4 candies and a key to box 1 in box 2.
-In box 1, you will find 5 candies and box 3 but you will not find a key to box 3 so box 3 will remain closed.
-Total number of candies collected = 7 + 4 + 5 = 16 candy.
+Input: word = "dbca", numFriends = 2
+Output: "dbc"
+
+Explanation: 
+
+All possible splits are:
+
+"d" and "bca".
+"db" and "ca".
+"dbc" and "a".
 Example 2:
 
-Input: status = [1,0,0,0,0,0], candies = [1,1,1,1,1,1], keys = [[1,2,3,4,5],[],[],[],[],[]], containedBoxes = [[1,2,3,4,5],[],[],[],[],[]], initialBoxes = [0]
-Output: 6
-Explanation: You have initially box 0. Opening it you can find boxes 1,2,3,4 and 5 and their keys.
-The total number of candies will be 6.
+Input: word = "gggg", numFriends = 4
+Output: "g"
+
+Explanation: 
+
+The only possible split is: "g", "g", "g", and "g".
    """)
 testcases(""" [100, 80, 70, 60, 70, 80, 90, 100, 90, 80, 70, 60, 60]
 [6, 7, 6, 5, 4, 3, 2, 1, 0, 0, 0, 1, 0]
