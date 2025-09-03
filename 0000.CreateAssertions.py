@@ -62,32 +62,32 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "answerString"
+name = "numberOfPairs"
 func = ""
 func2 = ""
 formatLC("""
-
-Example 1:
-
-Input: word = "dbca", numFriends = 2
-Output: "dbc"
-
-Explanation: 
-
-All possible splits are:
-
-"d" and "bca".
-"db" and "ca".
-"dbc" and "a".
+Input: points = [[1,1],[2,2],[3,3]]
+Output: 0
+Explanation: There is no way to place Alice and Bob such that Alice can build a fence with Alice's position as the upper left corner and Bob's position as the lower right corner. Hence we return 0. 
 Example 2:
 
-Input: word = "gggg", numFriends = 4
-Output: "g"
 
-Explanation: 
+Input: points = [[6,2],[4,4],[2,6]]
+Output: 2
+Explanation: There are two ways to place Alice and Bob such that Alice will not be sad:
+- Place Alice at (4, 4) and Bob at (6, 2).
+- Place Alice at (2, 6) and Bob at (4, 4).
+You cannot place Alice at (2, 6) and Bob at (6, 2) because the person at (4, 4) will be inside the fence.
+Example 3:
 
-The only possible split is: "g", "g", "g", and "g".
+
+Input: points = [[3,1],[1,3],[1,1]]
+Output: 2
+Explanation: There are two ways to place Alice and Bob such that Alice will not be sad:
+- Place Alice at (1, 1) and Bob at (3, 1).
+- Place Alice at (1, 3) and Bob at (1, 1).
+You cannot place Alice at (1, 3) and Bob at (3, 1) because the person at (1, 1) will be on the fence.
+Note that it does not matter if the fence encloses any area, the first and second fences in the image are valid.
+ 
    """)
-testcases(""" [100, 80, 70, 60, 70, 80, 90, 100, 90, 80, 70, 60, 60]
-[6, 7, 6, 5, 4, 3, 2, 1, 0, 0, 0, 1, 0]
-[20000, 20000, 16001, 16001, 16002, 16002, 16003, 16003, 16004, 16004, 16005, 16005, 16006, 16006, 16007, 16007, 16008, 16008, 16009, 16009, 16010, 16010, 16011, 16011, 16012, 16012, 16013, 16013, 16014, 16014, 16015, 16015, 16016, 16016, 16017, 16017, 16018, 16018, 16019, 16019, 16020, 16020, 16021, 16021, 16022, 16022, 16023, 16023, 16024, 16024]""", 1)
+testcases(""" """, 1)
