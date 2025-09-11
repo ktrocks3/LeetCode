@@ -62,32 +62,20 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "numberOfPairs"
+name = "sortVowels"
 func = ""
 func2 = ""
 formatLC("""
-Input: points = [[1,1],[2,2],[3,3]]
-Output: 0
-Explanation: There is no way to place Alice and Bob such that Alice can build a fence with Alice's position as the upper left corner and Bob's position as the lower right corner. Hence we return 0. 
+
+Example 1:
+
+Input: s = "lEetcOde"
+Output: "lEOtcede"
+Explanation: 'E', 'O', and 'e' are the vowels in s; 'l', 't', 'c', and 'd' are all consonants. The vowels are sorted according to their ASCII values, and the consonants remain in the same places.
 Example 2:
 
-
-Input: points = [[6,2],[4,4],[2,6]]
-Output: 2
-Explanation: There are two ways to place Alice and Bob such that Alice will not be sad:
-- Place Alice at (4, 4) and Bob at (6, 2).
-- Place Alice at (2, 6) and Bob at (4, 4).
-You cannot place Alice at (2, 6) and Bob at (6, 2) because the person at (4, 4) will be inside the fence.
-Example 3:
-
-
-Input: points = [[3,1],[1,3],[1,1]]
-Output: 2
-Explanation: There are two ways to place Alice and Bob such that Alice will not be sad:
-- Place Alice at (1, 1) and Bob at (3, 1).
-- Place Alice at (1, 3) and Bob at (1, 1).
-You cannot place Alice at (1, 3) and Bob at (3, 1) because the person at (1, 1) will be on the fence.
-Note that it does not matter if the fence encloses any area, the first and second fences in the image are valid.
- 
+Input: s = "lYmpH"
+Output: "lYmpH"
+Explanation: There are no vowels in s (all characters in s are consonants), so we return "lYmpH".
    """)
 testcases(""" """, 1)
