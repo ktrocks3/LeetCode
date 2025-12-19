@@ -62,22 +62,18 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxSubarraySum"
+name = "twoSum"
 func = ""
 func2 = ""
-formatLC("""Example 1:
-Input: nums = [1,2], k = 1
-Output: 3
-Explanation:
-The subarray [1, 2] with sum 3 has length equal to 2 which is divisible by 1.
+formatLC("""
+Example 1:
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 Example 2:
-Input: nums = [-1,-2,-3,-4,-5], k = 4
-Output: -10
-Explanation:
-The maximum sum subarray is [-1, -2, -3, -4] which has length equal to 4 which is divisible by 4.
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
 Example 3:
-Input: nums = [-5,1,2,-3,4], k = 2
-Output: 4
-Explanation:
-The maximum sum subarray is [1, 2, -3, 4] which has length equal to 4 which is divisible by 2.""")
+Input: nums = [3,3], target = 6
+Output: [0,1]""")
 testcases(""" """, 1)
