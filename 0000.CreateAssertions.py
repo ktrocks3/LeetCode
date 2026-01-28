@@ -62,17 +62,17 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "findMaxConsecutiveOnes"
+name = "findErrorNums"
 func = ""
 func2 = ""
 formatLC("""
 Example 1:
 
-Input: nums = [1,1,0,1,1,1]
-Output: 3
-Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+Input: nums = [1,2,2,4]
+Output: [2,3]
 Example 2:
 
-Input: nums = [1,0,1,1,0,1]
-Output: 2""")
+Input: nums = [1,1]
+Output: [1,2]
+ """)
 testcases(""" """, 1)
