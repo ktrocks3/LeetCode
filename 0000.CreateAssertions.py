@@ -62,37 +62,30 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "buildArray"
+name = "evalRPN"
 func = ""
 func2 = ""
 formatLC("""
+le 1:
 
-Example 1:
-
-Input: target = [1,3], n = 3
-Output: ["Push","Push","Pop","Push"]
-Explanation: Initially the stack s is empty. The last element is the top of the stack.
-Read 1 from the stream and push it to the stack. s = [1].
-Read 2 from the stream and push it to the stack. s = [1,2].
-Pop the integer on the top of the stack. s = [1].
-Read 3 from the stream and push it to the stack. s = [1,3].
+Input: tokens = ["2","1","+","3","*"]
+Output: 9
+Explanation: ((2 + 1) * 3) = 9
 Example 2:
 
-Input: target = [1,2,3], n = 3
-Output: ["Push","Push","Push"]
-Explanation: Initially the stack s is empty. The last element is the top of the stack.
-Read 1 from the stream and push it to the stack. s = [1].
-Read 2 from the stream and push it to the stack. s = [1,2].
-Read 3 from the stream and push it to the stack. s = [1,2,3].
+Input: tokens = ["4","13","5","/","+"]
+Output: 6
+Explanation: (4 + (13 / 5)) = 6
 Example 3:
 
-Input: target = [1,2], n = 4
-Output: ["Push","Push"]
-Explanation: Initially the stack s is empty. The last element is the top of the stack.
-Read 1 from the stream and push it to the stack. s = [1].
-Read 2 from the stream and push it to the stack. s = [1,2].
-Since the stack (from the bottom to the top) is equal to target, we stop the stack operations.
-The answers that read integer 3 from the stream are not accepted.
- 
+Input: tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]
+Output: 22
+Explanation: ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
+= ((10 * (6 / (12 * -11))) + 17) + 5
+= ((10 * (6 / -132)) + 17) + 5
+= ((10 * 0) + 17) + 5
+= (0 + 17) + 5
+= 17 + 5
+= 22
  """)
-testcases(""" """, 1)
+# testcases(""" """, 1)
