@@ -67,28 +67,26 @@ func = ""
 func2 = ""
 formatLC("""
 
-
 Example 1:
 
-Input: nums = [1,2,3,12]
-Output: 6
-Explanation: The best possible way to form 3 subarrays is: [1], [2], and [3,12] at a total cost of 1 + 2 + 3 = 6.
-The other possible ways to form 3 subarrays are:
-- [1], [2,3], and [12] at a total cost of 1 + 2 + 12 = 15.
-- [1,2], [3], and [12] at a total cost of 1 + 3 + 12 = 16.
+Input: nums = [1,3,2,6,4,2], k = 3, dist = 3
+Output: 5
+Explanation: The best possible way to divide nums into 3 subarrays is: [1,3], [2,6,4], and [2]. This choice is valid because ik-1 - i1 is 5 - 2 = 3 which is equal to dist. The total cost is nums[0] + nums[2] + nums[5] which is 1 + 2 + 2 = 5.
+It can be shown that there is no possible way to divide nums into 3 subarrays at a cost lower than 5.
 Example 2:
 
-Input: nums = [5,4,3]
-Output: 12
-Explanation: The best possible way to form 3 subarrays is: [5], [4], and [3] at a total cost of 5 + 4 + 3 = 12.
-It can be shown that 12 is the minimum cost achievable.
+Input: nums = [10,1,2,2,2,1], k = 4, dist = 3
+Output: 15
+Explanation: The best possible way to divide nums into 4 subarrays is: [10], [1], [2], and [2,2,1]. This choice is valid because ik-1 - i1 is 3 - 1 = 2 which is less than dist. The total cost is nums[0] + nums[1] + nums[2] + nums[3] which is 10 + 1 + 2 + 2 = 15.
+The division [10], [1], [2,2,2], and [1] is not valid, because the difference between ik-1 and i1 is 5 - 1 = 4, which is greater than dist.
+It can be shown that there is no possible way to divide nums into 4 subarrays at a cost lower than 15.
 Example 3:
 
-Input: nums = [10,3,1,1]
-Output: 12
-Explanation: The best possible way to form 3 subarrays is: [10,3], [1], and [1] at a total cost of 10 + 1 + 1 = 12.
-It can be shown that 12 is the minimum cost achievable.
- 
+Input: nums = [10,8,18,9], k = 3, dist = 1
+Output: 36
+Explanation: The best possible way to divide nums into 4 subarrays is: [10], [8], and [18,9]. This choice is valid because ik-1 - i1 is 2 - 1 = 1 which is equal to dist.The total cost is nums[0] + nums[1] + nums[2] which is 10 + 8 + 18 = 36.
+The division [10], [8,18], and [9] is not valid, because the difference between ik-1 and i1 is 3 - 1 = 2, which is greater than dist.
+It can be shown that there is no possible way to divide nums into 3 subarrays at a cost lower than 36.
  
  """)
 # testcases(""" """, 1)
