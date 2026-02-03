@@ -62,31 +62,29 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "minimumCost"
+name = "isTrionic"
 func = ""
 func2 = ""
 formatLC("""
-
 Example 1:
 
-Input: nums = [1,3,2,6,4,2], k = 3, dist = 3
-Output: 5
-Explanation: The best possible way to divide nums into 3 subarrays is: [1,3], [2,6,4], and [2]. This choice is valid because ik-1 - i1 is 5 - 2 = 3 which is equal to dist. The total cost is nums[0] + nums[2] + nums[5] which is 1 + 2 + 2 = 5.
-It can be shown that there is no possible way to divide nums into 3 subarrays at a cost lower than 5.
+Input: nums = [1,3,5,4,2,6]
+Output: true
+
+Explanation:
+
+Pick p = 2, q = 4:
+
+nums[0...2] = [1, 3, 5] is strictly increasing (1 < 3 < 5).
+nums[2...4] = [5, 4, 2] is strictly decreasing (5 > 4 > 2).
+nums[4...5] = [2, 6] is strictly increasing (2 < 6).
 Example 2:
 
-Input: nums = [10,1,2,2,2,1], k = 4, dist = 3
-Output: 15
-Explanation: The best possible way to divide nums into 4 subarrays is: [10], [1], [2], and [2,2,1]. This choice is valid because ik-1 - i1 is 3 - 1 = 2 which is less than dist. The total cost is nums[0] + nums[1] + nums[2] + nums[3] which is 10 + 1 + 2 + 2 = 15.
-The division [10], [1], [2,2,2], and [1] is not valid, because the difference between ik-1 and i1 is 5 - 1 = 4, which is greater than dist.
-It can be shown that there is no possible way to divide nums into 4 subarrays at a cost lower than 15.
-Example 3:
+Input: nums = [2,1,3]
+Output: false
 
-Input: nums = [10,8,18,9], k = 3, dist = 1
-Output: 36
-Explanation: The best possible way to divide nums into 4 subarrays is: [10], [8], and [18,9]. This choice is valid because ik-1 - i1 is 2 - 1 = 1 which is equal to dist.The total cost is nums[0] + nums[1] + nums[2] which is 10 + 8 + 18 = 36.
-The division [10], [8,18], and [9] is not valid, because the difference between ik-1 and i1 is 3 - 1 = 2, which is greater than dist.
-It can be shown that there is no possible way to divide nums into 3 subarrays at a cost lower than 36.
- 
+Explanation:
+
+There is no way to pick p and q to form the required three segments.
  """)
 # testcases(""" """, 1)
