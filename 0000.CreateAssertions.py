@@ -11,7 +11,6 @@ def makeAssertion(args: str, sol: str):
               f'\n  f\'Expected: {sol}, Received: {func2}({{Solution().{name}({func}({args[1:len(args) - 1]}))}})\'')
 
 
-
 def parse_input(input_string):
     values = []
     buffer = ""
@@ -39,6 +38,7 @@ def parse_input(input_string):
 
 def formatLC(in_out: str):
     in_out = in_out.split('\n')
+    while '' in in_out: in_out.remove('')
     for i in range(len(in_out)):
         if in_out[i].startswith('Input:'):
             input_string, out = in_out[i], in_out[i + 1]
@@ -62,29 +62,39 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "isTrionic"
+name = "maxSumTrionic"
 func = ""
 func2 = ""
 formatLC("""
+
 Example 1:
 
-Input: nums = [1,3,5,4,2,6]
-Output: true
+Input: nums = [0,-2,-1,-3,0,2,-1]
+
+Output: -4
 
 Explanation:
 
-Pick p = 2, q = 4:
+Pick l = 1, p = 2, q = 3, r = 5:
 
-nums[0...2] = [1, 3, 5] is strictly increasing (1 < 3 < 5).
-nums[2...4] = [5, 4, 2] is strictly decreasing (5 > 4 > 2).
-nums[4...5] = [2, 6] is strictly increasing (2 < 6).
+nums[l...p] = nums[1...2] = [-2, -1] is strictly increasing (-2 < -1).
+nums[p...q] = nums[2...3] = [-1, -3] is strictly decreasing (-1 > -3)
+nums[q...r] = nums[3...5] = [-3, 0, 2] is strictly increasing (-3 < 0 < 2).
+Sum = (-2) + (-1) + (-3) + 0 + 2 = -4.
 Example 2:
 
-Input: nums = [2,1,3]
-Output: false
+Input: nums = [1,4,2,7]
+
+Output: 14
 
 Explanation:
 
-There is no way to pick p and q to form the required three segments.
+Pick l = 0, p = 1, q = 2, r = 3:
+
+nums[l...p] = nums[0...1] = [1, 4] is strictly increasing (1 < 4).
+nums[p...q] = nums[1...2] = [4, 2] is strictly decreasing (4 > 2).
+nums[q...r] = nums[2...3] = [2, 7] is strictly increasing (2 < 7).
+Sum = 1 + 4 + 2 + 7 = 14.
+ 
  """)
 # testcases(""" """, 1)
