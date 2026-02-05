@@ -62,39 +62,32 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxSumTrionic"
+name = "constructTransformedArray"
 func = ""
 func2 = ""
 formatLC("""
-
 Example 1:
 
-Input: nums = [0,-2,-1,-3,0,2,-1]
+Input: nums = [3,-2,1,1]
 
-Output: -4
+Output: [1,1,1,3]
 
 Explanation:
 
-Pick l = 1, p = 2, q = 3, r = 5:
-
-nums[l...p] = nums[1...2] = [-2, -1] is strictly increasing (-2 < -1).
-nums[p...q] = nums[2...3] = [-1, -3] is strictly decreasing (-1 > -3)
-nums[q...r] = nums[3...5] = [-3, 0, 2] is strictly increasing (-3 < 0 < 2).
-Sum = (-2) + (-1) + (-3) + 0 + 2 = -4.
+For nums[0] that is equal to 3, If we move 3 steps to right, we reach nums[3]. So result[0] should be 1.
+For nums[1] that is equal to -2, If we move 2 steps to left, we reach nums[3]. So result[1] should be 1.
+For nums[2] that is equal to 1, If we move 1 step to right, we reach nums[3]. So result[2] should be 1.
+For nums[3] that is equal to 1, If we move 1 step to right, we reach nums[0]. So result[3] should be 3.
 Example 2:
 
-Input: nums = [1,4,2,7]
+Input: nums = [-1,4,-1]
 
-Output: 14
+Output: [-1,-1,4]
 
 Explanation:
 
-Pick l = 0, p = 1, q = 2, r = 3:
-
-nums[l...p] = nums[0...1] = [1, 4] is strictly increasing (1 < 4).
-nums[p...q] = nums[1...2] = [4, 2] is strictly decreasing (4 > 2).
-nums[q...r] = nums[2...3] = [2, 7] is strictly increasing (2 < 7).
-Sum = 1 + 4 + 2 + 7 = 14.
- 
+For nums[0] that is equal to -1, If we move 1 step to left, we reach nums[2]. So result[0] should be -1.
+For nums[1] that is equal to 4, If we move 4 steps to right, we reach nums[2]. So result[1] should be -1.
+For nums[2] that is equal to -1, If we move 1 step to left, we reach nums[1]. So result[2] should be 4.
  """)
 # testcases(""" """, 1)
