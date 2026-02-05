@@ -62,26 +62,37 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "countStudents"
+name = "timeRequiredToBuy"
 func = ""
 func2 = ""
 formatLC("""
 
-Input: students = [1,1,0,0], sandwiches = [0,1,0,1]
-Output: 0 
+Example 1:
+
+Input: tickets = [2,3,2], k = 2
+
+Output: 6
+
 Explanation:
-- Front student leaves the top sandwich and returns to the end of the line making students = [1,0,0,1].
-- Front student leaves the top sandwich and returns to the end of the line making students = [0,0,1,1].
-- Front student takes the top sandwich and leaves the line making students = [0,1,1] and sandwiches = [1,0,1].
-- Front student leaves the top sandwich and returns to the end of the line making students = [1,1,0].
-- Front student takes the top sandwich and leaves the line making students = [1,0] and sandwiches = [0,1].
-- Front student leaves the top sandwich and returns to the end of the line making students = [0,1].
-- Front student takes the top sandwich and leaves the line making students = [1] and sandwiches = [1].
-- Front student takes the top sandwich and leaves the line making students = [] and sandwiches = [].
-Hence all students are able to eat.
+
+The queue starts as [2,3,2], where the kth person is underlined.
+After the person at the front has bought a ticket, the queue becomes [3,2,1] at 1 second.
+Continuing this process, the queue becomes [2,1,2] at 2 seconds.
+Continuing this process, the queue becomes [1,2,1] at 3 seconds.
+Continuing this process, the queue becomes [2,1] at 4 seconds. Note: the person at the front left the queue.
+Continuing this process, the queue becomes [1,1] at 5 seconds.
+Continuing this process, the queue becomes [1] at 6 seconds. The kth person has bought all their tickets, so return 6.
 Example 2:
 
-Input: students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1]
-Output: 3
+Input: tickets = [5,1,1,1], k = 0
+
+Output: 8
+
+Explanation:
+
+The queue starts as [5,1,1,1], where the kth person is underlined.
+After the person at the front has bought a ticket, the queue becomes [1,1,1,4] at 1 second.
+Continuing this process for 3 seconds, the queue becomes [4] at 4 seconds.
+Continuing this process for 4 seconds, the queue becomes [] at 8 seconds. The kth person has bought all their tickets, so return 8.
  """)
 # testcases(""" """, 1)
