@@ -62,32 +62,26 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "constructTransformedArray"
+name = "countStudents"
 func = ""
 func2 = ""
 formatLC("""
-Example 1:
 
-Input: nums = [3,-2,1,1]
-
-Output: [1,1,1,3]
-
+Input: students = [1,1,0,0], sandwiches = [0,1,0,1]
+Output: 0 
 Explanation:
-
-For nums[0] that is equal to 3, If we move 3 steps to right, we reach nums[3]. So result[0] should be 1.
-For nums[1] that is equal to -2, If we move 2 steps to left, we reach nums[3]. So result[1] should be 1.
-For nums[2] that is equal to 1, If we move 1 step to right, we reach nums[3]. So result[2] should be 1.
-For nums[3] that is equal to 1, If we move 1 step to right, we reach nums[0]. So result[3] should be 3.
+- Front student leaves the top sandwich and returns to the end of the line making students = [1,0,0,1].
+- Front student leaves the top sandwich and returns to the end of the line making students = [0,0,1,1].
+- Front student takes the top sandwich and leaves the line making students = [0,1,1] and sandwiches = [1,0,1].
+- Front student leaves the top sandwich and returns to the end of the line making students = [1,1,0].
+- Front student takes the top sandwich and leaves the line making students = [1,0] and sandwiches = [0,1].
+- Front student leaves the top sandwich and returns to the end of the line making students = [0,1].
+- Front student takes the top sandwich and leaves the line making students = [1] and sandwiches = [1].
+- Front student takes the top sandwich and leaves the line making students = [] and sandwiches = [].
+Hence all students are able to eat.
 Example 2:
 
-Input: nums = [-1,4,-1]
-
-Output: [-1,-1,4]
-
-Explanation:
-
-For nums[0] that is equal to -1, If we move 1 step to left, we reach nums[2]. So result[0] should be -1.
-For nums[1] that is equal to 4, If we move 4 steps to right, we reach nums[2]. So result[1] should be -1.
-For nums[2] that is equal to -1, If we move 1 step to left, we reach nums[1]. So result[2] should be 4.
+Input: students = [1,1,1,0,0,1], sandwiches = [1,0,0,0,1,1]
+Output: 3
  """)
 # testcases(""" """, 1)
