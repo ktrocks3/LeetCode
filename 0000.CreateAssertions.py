@@ -62,29 +62,21 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "lastStoneWeight"
+name = "kSmallestPairs"
 func = ""
 func2 = ""
 formatLC("""
-ple 1:
 
-Input: stones = [2,7,4,1,8,1]
-Output: 1
-Explanation: 
-We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
-we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
-we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
-we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.
+Example 1:
+
+Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+Output: [[1,2],[1,4],[1,6]]
+Explanation: The first 3 pairs are returned from the sequence: [1,2],[1,4],[1,6],[7,2],[7,4],[11,2],[7,6],[11,4],[11,6]
 Example 2:
 
-Input: stones = [1]
-Output: 1
-
-Explanation:
-
-The queue starts as [5,1,1,1], where the kth person is underlined.
-After the person at the front has bought a ticket, the queue becomes [1,1,1,4] at 1 second.
-Continuing this process for 3 seconds, the queue becomes [4] at 4 seconds.
-Continuing this process for 4 seconds, the queue becomes [] at 8 seconds. The kth person has bought all their tickets, so return 8.
+Input: nums1 = [1,1,2], nums2 = [1,2,3], k = 2
+Output: [[1,1],[1,1]]
+Explanation: The first 2 pairs are returned from the sequence: [1,1],[1,1],[1,2],[2,1],[1,2],[2,2],[1,3],[1,3],[2,3]
+ 
  """)
 # testcases(""" """, 1)
