@@ -62,31 +62,23 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "timeRequiredToBuy"
+name = "lastStoneWeight"
 func = ""
 func2 = ""
 formatLC("""
+ple 1:
 
-Example 1:
-
-Input: tickets = [2,3,2], k = 2
-
-Output: 6
-
-Explanation:
-
-The queue starts as [2,3,2], where the kth person is underlined.
-After the person at the front has bought a ticket, the queue becomes [3,2,1] at 1 second.
-Continuing this process, the queue becomes [2,1,2] at 2 seconds.
-Continuing this process, the queue becomes [1,2,1] at 3 seconds.
-Continuing this process, the queue becomes [2,1] at 4 seconds. Note: the person at the front left the queue.
-Continuing this process, the queue becomes [1,1] at 5 seconds.
-Continuing this process, the queue becomes [1] at 6 seconds. The kth person has bought all their tickets, so return 6.
+Input: stones = [2,7,4,1,8,1]
+Output: 1
+Explanation: 
+We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.
 Example 2:
 
-Input: tickets = [5,1,1,1], k = 0
-
-Output: 8
+Input: stones = [1]
+Output: 1
 
 Explanation:
 
