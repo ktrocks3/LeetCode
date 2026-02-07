@@ -62,7 +62,7 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "minRemoval"
+name = "minimumDeletions"
 func = ""
 func2 = ""
 formatLC("""
@@ -70,45 +70,16 @@ formatLC("""
 
 Example 1:
 
-Input: nums = [2,1,5], k = 2
-
-Output: 1
-
-Explanation:
-
-Remove nums[2] = 5 to get nums = [2, 1].
-Now max = 2, min = 1 and max <= min * k as 2 <= 1 * 2. Thus, the answer is 1.
+Input: s = "aababbab"
+Output: 2
+Explanation: You can either:
+Delete the characters at 0-indexed positions 2 and 6 ("aababbab" -> "aaabbb"), or
+Delete the characters at 0-indexed positions 3 and 6 ("aababbab" -> "aabbbb").
 Example 2:
 
-Input: nums = [1,6,2,9], k = 3
-
+Input: s = "bbaaaaabb"
 Output: 2
-
-Explanation:
-
-Remove nums[0] = 1 and nums[3] = 9 to get nums = [6, 2].
-Now max = 6, min = 2 and max <= min * k as 6 <= 2 * 3. Thus, the answer is 2.
-Example 3:
-
-Input: nums = [4,6], k = 2
-
-Output: 0
-
-Explanation:
-
-Since nums is already balanced as 6 <= 4 * 2, no elements need to be removed.
+Explanation: The only solution is to delete the first two characters.
+ 
  """)
-testcases("""[2,1,5]
-2
-[2,12]
-2
-[8]
-1
-[32,607,740,134,944,91,410,155,493,89,12]
-10
-[1,34,23]
-2
-[26155,1776,22815,775,27772,12869,12995,22794,27692,24728,10944,25039,24068,25506,18506,19138,12331,17814,20834,21474,20208,21590,15453,6114,25716,29434,23547,29051,25992,5535,7387]
-80020
-[9514,4037,4183,20670,24972,13008,31534,34223,22722,7793,15527,37410,28870,7506,3485,19748,26934,333,38955,831,6658,24063,10075,14595,15246,5715,3382,27295,6093,24611,14191,31204,14631,12630]
-1""", 2)
+# testcases(""" """, 2)
