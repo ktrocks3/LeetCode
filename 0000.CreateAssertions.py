@@ -62,47 +62,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "longestBalanced"
+name = "champagneTower"
 func = ""
 func2 = ""
 formatLC("""
-You are given an integer array nums.
-
-A subarray is called balanced if the number of distinct even numbers in the subarray is equal to the number of distinct odd numbers.
-
-Return the length of the longest balanced subarray.
-
- 
 
 Example 1:
 
-Input: nums = [2,5,4,3]
-
-Output: 4
-
-Explanation:
-
-The longest balanced subarray is [2, 5, 4, 3].
-It has 2 distinct even numbers [2, 4] and 2 distinct odd numbers [5, 3]. Thus, the answer is 4.
+Input: poured = 1, query_row = 1, query_glass = 1
+Output: 0.00000
+Explanation: We poured 1 cup of champange to the top glass of the tower (which is indexed as (0, 0)). There will be no excess liquid so all the glasses under the top glass will remain empty.
 Example 2:
 
-Input: nums = [3,2,2,5,4]
-
-Output: 5
-
-Explanation:
-
-The longest balanced subarray is [3, 2, 2, 5, 4].
-It has 2 distinct even numbers [2, 4] and 2 distinct odd numbers [3, 5]. Thus, the answer is 5.
+Input: poured = 2, query_row = 1, query_glass = 1
+Output: 0.50000
+Explanation: We poured 2 cups of champange to the top glass of the tower (which is indexed as (0, 0)). There is one cup of excess liquid. The glass indexed as (1, 0) and the glass indexed as (1, 1) will share the excess liquid equally, and each will get half cup of champange.
 Example 3:
 
-Input: nums = [1,2,3,2]
-
-Output: 3
-
-Explanation:
-
-The longest balanced subarray is [2, 3, 2].
-It has 1 distinct even number [2] and 1 distinct odd number [3]. Thus, the answer is 3.
+Input: poured = 100000009, query_row = 33, query_glass = 17
+Output: 1.00000
+ 
  """)
 # testcases(""" """, 2)
