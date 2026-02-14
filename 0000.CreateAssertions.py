@@ -62,25 +62,29 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "champagneTower"
+name = "isPossible"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: poured = 1, query_row = 1, query_glass = 1
-Output: 0.00000
-Explanation: We poured 1 cup of champange to the top glass of the tower (which is indexed as (0, 0)). There will be no excess liquid so all the glasses under the top glass will remain empty.
+Input: target = [9,3,5]
+Output: true
+Explanation: Start with arr = [1, 1, 1] 
+[1, 1, 1], sum = 3 choose index 1
+[1, 3, 1], sum = 5 choose index 2
+[1, 3, 5], sum = 9 choose index 0
+[9, 3, 5] Done
 Example 2:
 
-Input: poured = 2, query_row = 1, query_glass = 1
-Output: 0.50000
-Explanation: We poured 2 cups of champange to the top glass of the tower (which is indexed as (0, 0)). There is one cup of excess liquid. The glass indexed as (1, 0) and the glass indexed as (1, 1) will share the excess liquid equally, and each will get half cup of champange.
+Input: target = [1,1,1,2]
+Output: false
+Explanation: Impossible to create target array from [1,1,1,1].
 Example 3:
 
-Input: poured = 100000009, query_row = 33, query_glass = 17
-Output: 1.00000
- 
+Input: target = [8,5]
+Output: true
+  
  """)
 # testcases(""" """, 2)
