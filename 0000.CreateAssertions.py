@@ -62,29 +62,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maskPII"
+name = "repeatedSubstringPattern"
 func = ""
 func2 = ""
 formatLC("""
+
 Example 1:
 
-Input: s = "LeetCode@LeetCode.com"
-Output: "l*****e@leetcode.com"
-Explanation: s is an email address.
-The name and domain are converted to lowercase, and the middle of the name is replaced by 5 asterisks.
+Input: s = "abab"
+Output: true
+Explanation: It is the substring "ab" twice.
 Example 2:
 
-Input: s = "AB@qq.com"
-Output: "a*****b@qq.com"
-Explanation: s is an email address.
-The name and domain are converted to lowercase, and the middle of the name is replaced by 5 asterisks.
-Note that even though "ab" is 2 characters, it still must have 5 asterisks in the middle.
+Input: s = "aba"
+Output: false
 Example 3:
 
-Input: s = "1(234)567-890"
-Output: "***-***-7890"
-Explanation: s is a phone number.
-There are 10 digits, so the local number is 10 digits and the country code is 0 digits.
-Thus, the resulting masked number is "***-***-7890". 
+Input: s = "abcabcabcabc"
+Output: true
+Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
+ 
  """)
 # testcases(""" """, 2)
