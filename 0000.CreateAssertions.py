@@ -62,25 +62,19 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "repeatedSubstringPattern"
+name = "rotateString"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: s = "abab"
+Input: s = "abcde", goal = "cdeab"
 Output: true
-Explanation: It is the substring "ab" twice.
 Example 2:
 
-Input: s = "aba"
+Input: s = "abcde", goal = "abced"
 Output: false
-Example 3:
-
-Input: s = "abcabcabcabc"
-Output: true
-Explanation: It is the substring "abc" four times or the substring "abcabc" twice.
  
  """)
 # testcases(""" """, 2)
