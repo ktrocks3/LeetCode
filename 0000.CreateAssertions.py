@@ -62,19 +62,22 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "rotateString"
+name = "repeatedStringMatch"
 func = ""
 func2 = ""
 formatLC("""
+ 
 
 Example 1:
 
-Input: s = "abcde", goal = "cdeab"
-Output: true
+Input: a = "abcd", b = "cdabcdab"
+Output: 3
+Explanation: We return 3 because by repeating a three times "abcdabcdabcd", b is a substring of it.
 Example 2:
 
-Input: s = "abcde", goal = "abced"
-Output: false
+Input: a = "a", b = "aa"
+Output: 2
+ 
  
  """)
 # testcases(""" """, 2)
