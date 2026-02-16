@@ -1,13 +1,17 @@
+from typing import List, Optional
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
-        self.val   = val
-        self.left  = left
+        self.val = val
+        self.left = left
         self.right = right
 
     def __str__(self):
-        left_val  = self.left.val  if self.left  else None
+        left_val = self.left.val if self.left else None
         right_val = self.right.val if self.right else None
         return f"TreeNode(val={self.val}, left={left_val}, right={right_val})"
+
 
 def convertArr(arr) -> TreeNode:
     if not arr:
@@ -36,7 +40,6 @@ def convertArr(arr) -> TreeNode:
     return nodes[0]
 
 
-
 def convertTree(root: TreeNode) -> list:
     if not root:
         return []
@@ -54,3 +57,30 @@ def convertTree(root: TreeNode) -> list:
             queue.append(current.right)
 
     return result
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+    def __eq__(self, other):
+        if type(other) == list:
+            return nodeToList(self) == other
+        return self.val == other.val and self.next == other.next
+
+
+def listToNode(l: List[int]) -> Optional[ListNode]:
+    if not l:
+        return None
+    return ListNode(val=l[0], next=listToNode(l[1:]))
+
+
+def nodeToList(node: Optional[ListNode]) -> List[int]:
+    if not node:
+        return []
+    arr = []
+    while node:
+        arr.append(node.val)
+        node = node.next
+    return arr
