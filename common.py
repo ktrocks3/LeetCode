@@ -69,6 +69,9 @@ class ListNode:
             return nodeToList(self) == other
         return self.val == other.val and self.next == other.next
 
+    def __str__(self):
+        return str(nodeToList(self))
+
 
 def listToNode(l: List[int]) -> Optional[ListNode]:
     if not l:
