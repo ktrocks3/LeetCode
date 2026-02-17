@@ -66,21 +66,19 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "oddEvenList"
-func = "listToNode"
+name = "readBinaryWatch"
+func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-
-Input: head = [1,2,3,4,5]
-Output: [1,3,5,2,4]
+Input: turnedOn = 1
+Output: ["0:01","0:02","0:04","0:08","0:16","0:32","1:00","2:00","4:00","8:00"]
 Example 2:
 
-
-Input: head = [2,1,3,5,6,4,7]
-Output: [2,3,6,7,1,5,4]
+Input: turnedOn = 9
+Output: []
  
  """)
 # testcases(""" """, 2)

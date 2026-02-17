@@ -6,6 +6,8 @@ from common import ListNode, listToNode
 class Solution:
     def oddEvenList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         f = head
+        if not f or not f.next:
+            return head
         s = head.next
         ss = s
         while (f and f.next) or (s and s.next):
