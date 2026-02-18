@@ -66,23 +66,26 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "reverseList"
-func = "listToNode"
+name = "hasAlternatingBits"
+func = ""
 func2 = ""
 formatLC("""
+
 Example 1:
 
-
-Input: head = [1,2,3,4,5]
-Output: [5,4,3,2,1]
+Input: n = 5
+Output: true
+Explanation: The binary representation of 5 is: 101
 Example 2:
 
-
-Input: head = [1,2]
-Output: [2,1]
+Input: n = 7
+Output: false
+Explanation: The binary representation of 7 is: 111.
 Example 3:
 
-Input: head = []
-Output: []
+Input: n = 11
+Output: false
+Explanation: The binary representation of 11 is: 1011.
+
  """)
 # testcases(""" """, 2)
