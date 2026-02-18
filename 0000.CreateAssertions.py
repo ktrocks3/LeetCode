@@ -66,19 +66,23 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "readBinaryWatch"
-func = ""
+name = "reverseList"
+func = "listToNode"
 func2 = ""
 formatLC("""
-
 Example 1:
 
-Input: turnedOn = 1
-Output: ["0:01","0:02","0:04","0:08","0:16","0:32","1:00","2:00","4:00","8:00"]
+
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
 Example 2:
 
-Input: turnedOn = 9
+
+Input: head = [1,2]
+Output: [2,1]
+Example 3:
+
+Input: head = []
 Output: []
- 
  """)
 # testcases(""" """, 2)

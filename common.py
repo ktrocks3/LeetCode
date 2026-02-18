@@ -65,8 +65,10 @@ class ListNode:
         self.next = next
 
     def __eq__(self, other):
+        if self is None and (other is None or other == []):
+            return True
         if type(other) == list:
-            return nodeToList(self) == other
+            return self == listToNode(other)
         return self.val == other.val and self.next == other.next
 
     def __str__(self):
