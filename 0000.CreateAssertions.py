@@ -66,26 +66,24 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "hasAlternatingBits"
+name = "twoSum"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: n = 5
-Output: true
-Explanation: The binary representation of 5 is: 101
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 Example 2:
 
-Input: n = 7
-Output: false
-Explanation: The binary representation of 7 is: 111.
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
 Example 3:
 
-Input: n = 11
-Output: false
-Explanation: The binary representation of 11 is: 1011.
-
+Input: nums = [3,3], target = 6
+Output: [0,1]
+ 
  """)
 # testcases(""" """, 2)
