@@ -66,24 +66,26 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "countBinarySubstrings"
+name = "firstMissingPositive"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: s = "00110011"
-Output: 6
-Explanation: There are 6 substrings that have equal number of consecutive 1's and 0's: "0011", "01", "1100", "10", "0011", and "01".
-Notice that some of these substrings repeat and are counted the number of times they occur.
-Also, "00110011" is not a valid substring because all the 0's (and 1's) are not grouped together.
+Input: nums = [1,2,0]
+Output: 3
+Explanation: The numbers in the range [1,2] are all in the array.
 Example 2:
 
-Input: s = "10101"
-Output: 4
-Explanation: There are 4 substrings: "10", "01", "10", "01" that have equal number of consecutive 1's and 0's.
- 
+Input: nums = [3,4,-1,1]
+Output: 2
+Explanation: 1 is in the array but 2 is missing.
+Example 3:
+
+Input: nums = [7,8,9,11,12]
+Output: 1
+Explanation: The smallest positive integer 1 is missing.
  
  """)
 # testcases(""" """, 2)
