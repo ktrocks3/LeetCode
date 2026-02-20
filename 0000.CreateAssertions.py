@@ -66,26 +66,21 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "firstMissingPositive"
+name = "makeLargestSpecial"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: nums = [1,2,0]
-Output: 3
-Explanation: The numbers in the range [1,2] are all in the array.
+Input: s = "11011000"
+Output: "11100100"
+Explanation: The strings "10" [occuring at s[1]] and "1100" [at s[3]] are swapped.
+This is the lexicographically largest string possible after some number of swaps.
 Example 2:
 
-Input: nums = [3,4,-1,1]
-Output: 2
-Explanation: 1 is in the array but 2 is missing.
-Example 3:
-
-Input: nums = [7,8,9,11,12]
-Output: 1
-Explanation: The smallest positive integer 1 is missing.
+Input: s = "10"
+Output: "10"
  
  """)
 # testcases(""" """, 2)
