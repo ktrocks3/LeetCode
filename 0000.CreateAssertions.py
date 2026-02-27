@@ -66,41 +66,45 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "numSteps"
+name = "minOperations"
 func = ""
 func2 = ""
 formatLC("""
-Given the binary representation of an integer as a string s, return the number of steps to reduce it to 1 under the following rules:
-
-If the current number is even, you have to divide it by 2.
-
-If the current number is odd, you have to add 1 to it.
-
-It is guaranteed that you can always reach one for all test cases.
-
- 
 
 Example 1:
 
-Input: s = "1101"
-Output: 6
-Explanation: "1101" corressponds to number 13 in their decimal representation.
-Step 1) 13 is odd, add 1 and obtain 14. 
-Step 2) 14 is even, divide by 2 and obtain 7.
-Step 3) 7 is odd, add 1 and obtain 8.
-Step 4) 8 is even, divide by 2 and obtain 4.  
-Step 5) 4 is even, divide by 2 and obtain 2. 
-Step 6) 2 is even, divide by 2 and obtain 1.  
+Input: s = "110", k = 1
+
+Output: 1
+
+Explanation:
+
+There is one '0' in s.
+Since k = 1, we can flip it directly in one operation.
 Example 2:
 
-Input: s = "10"
-Output: 1
-Explanation: "10" corresponds to number 2 in their decimal representation.
-Step 1) 2 is even, divide by 2 and obtain 1.  
+Input: s = "0101", k = 3
+
+Output: 2
+
+Explanation:
+
+One optimal set of operations choosing k = 3 indices in each operation is:
+
+Operation 1: Flip indices [0, 1, 3]. s changes from "0101" to "1000".
+Operation 2: Flip indices [1, 2, 3]. s changes from "1000" to "1111".
+Thus, the minimum number of operations is 2.
+
 Example 3:
 
-Input: s = "1"
-Output: 0
+Input: s = "101", k = 2
+
+Output: -1
+
+Explanation:
+
+Since k = 2 and s has only one '0', it is impossible to flip exactly k indices to make all '1'. Hence, the answer is -1.
+
  
  
  """)
