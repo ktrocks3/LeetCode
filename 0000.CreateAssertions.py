@@ -66,20 +66,24 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "checkOnesSegment"
+name = "findDifferentBinaryString"
 func = ""
 func2 = ""
 formatLC("""
 
-Example 1:
-
-Input: s = "1001"
-Output: false
-Explanation: The ones do not form a contiguous segment.
+Input: nums = ["01","10"]
+Output: "11"
+Explanation: "11" does not appear in nums. "00" would also be correct.
 Example 2:
 
-Input: s = "110"
-Output: true
+Input: nums = ["00","01"]
+Output: "11"
+Explanation: "11" does not appear in nums. "10" would also be correct.
+Example 3:
+
+Input: nums = ["111","011","001"]
+Output: "101"
+Explanation: "101" does not appear in nums. "000", "010", "100", and "110" would also be correct.
  
  
  """)
