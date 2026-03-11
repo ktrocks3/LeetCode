@@ -66,26 +66,24 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "bitwiseComplement"
+name = "minimumAbsDifference"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: n = 5
-Output: 2
-Explanation: 5 is "101" in binary, with complement "010" in binary, which is 2 in base-10.
+Input: arr = [4,2,1,3]
+Output: [[1,2],[2,3],[3,4]]
+Explanation: The minimum absolute difference is 1. List all pairs with difference equal to 1 in ascending order.
 Example 2:
 
-Input: n = 7
-Output: 0
-Explanation: 7 is "111" in binary, with complement "000" in binary, which is 0 in base-10.
+Input: arr = [1,3,6,10,15]
+Output: [[1,3]]
 Example 3:
 
-Input: n = 10
-Output: 5
-Explanation: 10 is "1010" in binary, with complement "0101" in binary, which is 5 in base-10.
+Input: arr = [3,8,-10,23,19,-4,-14,27]
+Output: [[-14,-10],[19,23],[23,27]]
  
  """)
 # testcases(""" """, 2)
