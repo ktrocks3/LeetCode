@@ -66,31 +66,26 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "waysToMakeFair"
+name = "bitwiseComplement"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: nums = [2,1,6,4]
-Output: 1
-Explanation:
-Remove index 0: [1,6,4] -> Even sum: 1 + 4 = 5. Odd sum: 6. Not fair.
-Remove index 1: [2,6,4] -> Even sum: 2 + 4 = 6. Odd sum: 6. Fair.
-Remove index 2: [2,1,4] -> Even sum: 2 + 4 = 6. Odd sum: 1. Not fair.
-Remove index 3: [2,1,6] -> Even sum: 2 + 6 = 8. Odd sum: 1. Not fair.
-There is 1 index that you can remove to make nums fair.
+Input: n = 5
+Output: 2
+Explanation: 5 is "101" in binary, with complement "010" in binary, which is 2 in base-10.
 Example 2:
 
-Input: nums = [1,1,1]
-Output: 3
-Explanation: You can remove any index and the remaining array is fair.
+Input: n = 7
+Output: 0
+Explanation: 7 is "111" in binary, with complement "000" in binary, which is 0 in base-10.
 Example 3:
 
-Input: nums = [1,2,3]
-Output: 0
-Explanation: You cannot make a fair array after removing any index.
+Input: n = 10
+Output: 5
+Explanation: 10 is "1010" in binary, with complement "0101" in binary, which is 5 in base-10.
  
  """)
 # testcases(""" """, 2)
