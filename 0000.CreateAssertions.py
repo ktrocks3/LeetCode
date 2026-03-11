@@ -66,24 +66,32 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "minimumAbsDifference"
+name = "reductionOperations"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: arr = [4,2,1,3]
-Output: [[1,2],[2,3],[3,4]]
-Explanation: The minimum absolute difference is 1. List all pairs with difference equal to 1 in ascending order.
+Input: nums = [5,1,3]
+Output: 3
+Explanation: It takes 3 operations to make all elements in nums equal:
+1. largest = 5 at index 0. nextLargest = 3. Reduce nums[0] to 3. nums = [3,1,3].
+2. largest = 3 at index 0. nextLargest = 1. Reduce nums[0] to 1. nums = [1,1,3].
+3. largest = 3 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1].
 Example 2:
 
-Input: arr = [1,3,6,10,15]
-Output: [[1,3]]
+Input: nums = [1,1,1]
+Output: 0
+Explanation: All elements in nums are already equal.
 Example 3:
 
-Input: arr = [3,8,-10,23,19,-4,-14,27]
-Output: [[-14,-10],[19,23],[23,27]]
- 
+Input: nums = [1,1,2,2,3]
+Output: 4
+Explanation: It takes 4 operations to make all elements in nums equal:
+1. largest = 3 at index 4. nextLargest = 2. Reduce nums[4] to 2. nums = [1,1,2,2,2].
+2. largest = 2 at index 2. nextLargest = 1. Reduce nums[2] to 1. nums = [1,1,1,2,2].
+3. largest = 2 at index 3. nextLargest = 1. Reduce nums[3] to 1. nums = [1,1,1,1,2].
+4. largest = 2 at index 4. nextLargest = 1. Reduce nums[4] to 1. nums = [1,1,1,1,1].
  """)
 # testcases(""" """, 2)
