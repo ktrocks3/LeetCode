@@ -66,28 +66,19 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "merge"
+name = "findKthLargest"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Example 1:
-
-Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
-Output: [[1,6],[8,10],[15,18]]
-Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+Input: nums = [3,2,1,5,6,4], k = 2
+Output: 5
 Example 2:
 
-Input: intervals = [[1,4],[4,5]]
-Output: [[1,5]]
-Explanation: Intervals [1,4] and [4,5] are considered overlapping.
-Example 3:
-
-Input: intervals = [[4,7],[1,4]]
-Output: [[1,7]]
-Explanation: Intervals [1,4] and [4,7] are considered overlapping.
+Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+Output: 4
  
  """)
 # testcases(""" """, 2)
