@@ -66,27 +66,21 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "peakIndexInMountainArray"
+name = "search"
 func = ""
 func2 = ""
 formatLC("""
  
 Example 1:
 
-Input: arr = [0,1,0]
-
-Output: 1
-
+Input: nums = [-1,0,3,5,9,12], target = 9
+Output: 4
+Explanation: 9 exists in nums and its index is 4
 Example 2:
 
-Input: arr = [0,2,1,0]
-
-Output: 1
-
-Example 3:
-
-Input: arr = [0,10,5,2]
-
-Output: 1
+Input: nums = [-1,0,3,5,9,12], target = 2
+Output: -1
+Explanation: 2 does not exist in nums so return -1
+ 
  """)
 # testcases(""" """, 2)
