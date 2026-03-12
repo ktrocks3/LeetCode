@@ -66,43 +66,22 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "maxStability"
-func = ""
-func2 = ""
+name = "insertionSortList"
+func = "listToNode"
+func2 = "listToNode"
 formatLC("""
+ 
 
 Example 1:
 
-Input: n = 3, edges = [[0,1,2,1],[1,2,3,0]], k = 1
 
-Output: 2
-
-Explanation:
-
-Edge [0,1] with strength = 2 must be included in the spanning tree.
-Edge [1,2] is optional and can be upgraded from 3 to 6 using one upgrade.
-The resulting spanning tree includes these two edges with strengths 2 and 6.
-The minimum strength in the spanning tree is 2, which is the maximum possible stability.
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
 Example 2:
 
-Input: n = 3, edges = [[0,1,4,0],[1,2,3,0],[0,2,1,0]], k = 2
 
-Output: 6
-
-Explanation:
-
-Since all edges are optional and up to k = 2 upgrades are allowed.
-Upgrade edges [0,1] from 4 to 8 and [1,2] from 3 to 6.
-The resulting spanning tree includes these two edges with strengths 8 and 6.
-The minimum strength in the tree is 6, which is the maximum possible stability.
-Example 3:
-
-Input: n = 3, edges = [[0,1,1,1],[1,2,1,1],[2,0,1,1]], k = 0
-
-Output: -1
-
-Explanation:
-
-All edges are mandatory and form a cycle, which violates the spanning tree property of acyclicity. Thus, the answer is -1.
+Input: head = [-1,5,3,4,0]
+Output: [-1,0,3,4,5]
+ 
  """)
 # testcases(""" """, 2)
