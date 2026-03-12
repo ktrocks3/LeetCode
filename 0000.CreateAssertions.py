@@ -66,22 +66,27 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "insertionSortList"
-func = "listToNode"
-func2 = "listToNode"
+name = "peakIndexInMountainArray"
+func = ""
+func2 = ""
 formatLC("""
  
-
 Example 1:
 
+Input: arr = [0,1,0]
 
-Input: head = [4,2,1,3]
-Output: [1,2,3,4]
+Output: 1
+
 Example 2:
 
+Input: arr = [0,2,1,0]
 
-Input: head = [-1,5,3,4,0]
-Output: [-1,0,3,4,5]
- 
+Output: 1
+
+Example 3:
+
+Input: arr = [0,10,5,2]
+
+Output: 1
  """)
 # testcases(""" """, 2)
