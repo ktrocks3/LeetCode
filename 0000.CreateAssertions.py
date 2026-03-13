@@ -66,19 +66,23 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "judgeSquareSum"
+name = "search"
 func = ""
 func2 = ""
 formatLC("""
- mple 1:
 
-Input: c = 5
-Output: true
-Explanation: 1 * 1 + 2 * 2 = 5
+Example 1:
+
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
 Example 2:
 
-Input: c = 3
-Output: false
+Input: nums = [4,5,6,7,0,1,2], target = 3
+Output: -1
+Example 3:
+
+Input: nums = [1], target = 0
+Output: -1
  
  """)
 # testcases(""" """, 2)
