@@ -66,50 +66,45 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "minNumberOfSeconds"
+name = "getBiggestThree"
 func = ""
 func2 = ""
 formatLC("""
+You are given an m x n integer matrix grid​​​.
+
+A rhombus sum is the sum of the elements that form the border of a regular rhombus shape in grid​​​. The rhombus must have the shape of a square rotated 45 degrees with each of the corners centered in a grid cell. Below is an image of four valid rhombus shapes with the corresponding colored cells that should be included in each rhombus sum:
+
+
+Note that the rhombus can have an area of 0, which is depicted by the purple rhombus in the bottom right corner.
+
+Return the biggest three distinct rhombus sums in the grid in descending order. If there are less than three distinct values, return all of them.
+
+ 
 
 Example 1:
 
-Input: mountainHeight = 4, workerTimes = [2,1,1]
 
-Output: 3
-
-Explanation:
-
-One way the height of the mountain can be reduced to 0 is:
-
-Worker 0 reduces the height by 1, taking workerTimes[0] = 2 seconds.
-Worker 1 reduces the height by 2, taking workerTimes[1] + workerTimes[1] * 2 = 3 seconds.
-Worker 2 reduces the height by 1, taking workerTimes[2] = 1 second.
-Since they work simultaneously, the minimum time needed is max(2, 3, 1) = 3 seconds.
-
+Input: grid = [[3,4,5,1,3],[3,3,4,2,3],[20,30,200,40,10],[1,5,5,4,1],[4,3,2,2,5]]
+Output: [228,216,211]
+Explanation: The rhombus shapes for the three biggest distinct rhombus sums are depicted above.
+- Blue: 20 + 3 + 200 + 5 = 228
+- Red: 200 + 2 + 10 + 4 = 216
+- Green: 5 + 200 + 4 + 2 = 211
 Example 2:
 
-Input: mountainHeight = 10, workerTimes = [3,2,2,4]
 
-Output: 12
-
-Explanation:
-
-Worker 0 reduces the height by 2, taking workerTimes[0] + workerTimes[0] * 2 = 9 seconds.
-Worker 1 reduces the height by 3, taking workerTimes[1] + workerTimes[1] * 2 + workerTimes[1] * 3 = 12 seconds.
-Worker 2 reduces the height by 3, taking workerTimes[2] + workerTimes[2] * 2 + workerTimes[2] * 3 = 12 seconds.
-Worker 3 reduces the height by 2, taking workerTimes[3] + workerTimes[3] * 2 = 12 seconds.
-The number of seconds needed is max(9, 12, 12, 12) = 12 seconds.
-
+Input: grid = [[1,2,3],[4,5,6],[7,8,9]]
+Output: [20,9,8]
+Explanation: The rhombus shapes for the three biggest distinct rhombus sums are depicted above.
+- Blue: 4 + 2 + 6 + 8 = 20
+- Red: 9 (area 0 rhombus in the bottom right corner)
+- Green: 8 (area 0 rhombus in the bottom middle)
 Example 3:
 
-Input: mountainHeight = 5, workerTimes = [1]
-
-Output: 15
-
-Explanation:
-
-There is only one worker in this example, so the answer is workerTimes[0] + workerTimes[0] * 2 + workerTimes[0] * 3 + workerTimes[0] * 4 + workerTimes[0] * 5 = 15.
-
+Input: grid = [[7,7,7]]
+Output: [7]
+Explanation: All three possible rhombus sums are the same, so return [7].
+ 
  
  
  """)
