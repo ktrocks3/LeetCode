@@ -66,49 +66,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "largestSubmatrix"
+name = "maxProductPath"
 func = ""
 func2 = ""
 formatLC("""
-1727. Largest Submatrix With Rearrangements
-Medium
-Topics
-premium lock icon
-Companies
-Hint
-You are given a binary matrix matrix of size m x n, and you are allowed to rearrange the columns of the matrix in any order.
-
-Return the area of the largest submatrix within matrix where every element of the submatrix is 1 after reordering the columns optimally.
-
- 
-
-Example 1:
-
-
-Input: matrix = [[0,0,1],[1,1,1],[1,0,1]]
-Output: 4
-Explanation: You can rearrange the columns as shown above.
-The largest submatrix of 1s, in bold, has an area of 4.
+Input: grid = [[-1,-2,-3],[-2,-3,-3],[-3,-3,-2]]
+Output: -1
+Explanation: It is not possible to get non-negative product in the path from (0, 0) to (2, 2), so return -1.
 Example 2:
 
 
-Input: matrix = [[1,0,1,0,1]]
-Output: 3
-Explanation: You can rearrange the columns as shown above.
-The largest submatrix of 1s, in bold, has an area of 3.
+Input: grid = [[1,-2,1],[1,-2,1],[3,-4,1]]
+Output: 8
+Explanation: Maximum non-negative product is shown (1 * 1 * -2 * -4 * 1 = 8).
 Example 3:
 
-Input: matrix = [[1,1,0],[1,0,1]]
-Output: 2
-Explanation: Notice that you must rearrange entire columns, and there is no way to make a submatrix of 1s larger than an area of 2.
- 
 
-Constraints:
-
-m == matrix.length
-n == matrix[i].length
-1 <= m * n <= 105
-matrix[i][j] is either 0 or 1.
+Input: grid = [[1,3],[0,-4]]
+Output: 0
+Explanation: Maximum non-negative product is shown (1 * 0 * -4 = 0).
  
  
  """)
