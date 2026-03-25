@@ -10,8 +10,19 @@ class TreeNode:
     def __str__(self):
         left_val = self.left.val if self.left else None
         right_val = self.right.val if self.right else None
-        return f"TreeNode(val={self.val}, left={left_val}, right={right_val})"
+        return f"TreeNode(val={self.val}, left={left_val}, right={right_val}): {convertTree(self)}"
 
+    def __eq__(self, other):
+        if other is None:
+            return False
+
+        if isinstance(other, list):
+            return convertTree(self) == other
+
+        if isinstance(other, TreeNode):
+            return convertTree(self) == convertArr(other)
+
+        return NotImplemented
 
 def convertArr(arr) -> TreeNode:
     if not arr:
