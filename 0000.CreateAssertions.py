@@ -66,33 +66,19 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "canPartitionGrid"
+name = "beautifulArray"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: grid = [[1,4],[2,3]]
-
-Output: true
-
-Explanation:
-
-
-
-A horizontal cut between row 0 and row 1 results in two non-empty sections, each with a sum of 5. Thus, the answer is true.
-
+Input: n = 4
+Output: [2,1,4,3]
 Example 2:
 
-Input: grid = [[1,3],[2,4]]
-
-Output: false
-
-Explanation:
-
-No horizontal or vertical cut results in two non-empty sections with equal sums. Thus, the answer is false.
-
+Input: n = 5
+Output: [3,1,2,5,4]
  
  """)
 # testcases(""" """, 2)
