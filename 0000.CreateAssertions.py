@@ -66,28 +66,33 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "constructProductMatrix"
+name = "canPartitionGrid"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: grid = [[1,2],[3,4]]
-Output: [[24,12],[8,6]]
-Explanation: p[0][0] = grid[0][1] * grid[1][0] * grid[1][1] = 2 * 3 * 4 = 24
-p[0][1] = grid[0][0] * grid[1][0] * grid[1][1] = 1 * 3 * 4 = 12
-p[1][0] = grid[0][0] * grid[0][1] * grid[1][1] = 1 * 2 * 4 = 8
-p[1][1] = grid[0][0] * grid[0][1] * grid[1][0] = 1 * 2 * 3 = 6
-So the answer is [[24,12],[8,6]].
+Input: grid = [[1,4],[2,3]]
+
+Output: true
+
+Explanation:
+
+
+
+A horizontal cut between row 0 and row 1 results in two non-empty sections, each with a sum of 5. Thus, the answer is true.
+
 Example 2:
 
-Input: grid = [[12345],[2],[1]]
-Output: [[2],[0],[0]]
-Explanation: p[0][0] = grid[0][1] * grid[0][2] = 2 * 1 = 2.
-p[0][1] = grid[0][0] * grid[0][2] = 12345 * 1 = 12345. 12345 % 12345 = 0. So p[0][1] = 0.
-p[0][2] = grid[0][0] * grid[0][1] = 12345 * 2 = 24690. 24690 % 12345 = 0. So p[0][2] = 0.
-So the answer is [[2],[0],[0]].
+Input: grid = [[1,3],[2,4]]
+
+Output: false
+
+Explanation:
+
+No horizontal or vertical cut results in two non-empty sections with equal sums. Thus, the answer is false.
+
  
  """)
 # testcases(""" """, 2)
