@@ -66,21 +66,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "buildTree"
+name = "reversePairs"
 func = ""
 func2 = ""
 formatLC("""
 
-
 Example 1:
 
-
-Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
-Output: [3,9,20,null,null,15,7]
+Input: nums = [1,3,2,3,1]
+Output: 2
+Explanation: The reverse pairs are:
+(1, 4) --> nums[1] = 3, nums[4] = 1, 3 > 2 * 1
+(3, 4) --> nums[3] = 3, nums[4] = 1, 3 > 2 * 1
 Example 2:
 
-Input: inorder = [-1], postorder = [-1]
-Output: [-1]
- 
- """)
+Input: nums = [2,4,3,5,1]
+Output: 3
+Explanation: The reverse pairs are:
+(1, 4) --> nums[1] = 4, nums[4] = 1, 4 > 2 * 1
+(2, 4) --> nums[2] = 3, nums[4] = 1, 3 > 2 * 1
+(3, 4) --> nums[3] = 5, nums[4] = 1, 5 > 2 * 1
+  """)
 # testcases(""" """, 2)
