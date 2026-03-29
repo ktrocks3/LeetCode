@@ -66,25 +66,25 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "reversePairs"
+name = "canBeEqual"
 func = ""
 func2 = ""
 formatLC("""
 
 Example 1:
 
-Input: nums = [1,3,2,3,1]
-Output: 2
-Explanation: The reverse pairs are:
-(1, 4) --> nums[1] = 3, nums[4] = 1, 3 > 2 * 1
-(3, 4) --> nums[3] = 3, nums[4] = 1, 3 > 2 * 1
+Input: s1 = "abcd", s2 = "cdab"
+Output: true
+Explanation: We can do the following operations on s1:
+- Choose the indices i = 0, j = 2. The resulting string is s1 = "cbad".
+- Choose the indices i = 1, j = 3. The resulting string is s1 = "cdab" = s2.
 Example 2:
 
-Input: nums = [2,4,3,5,1]
-Output: 3
-Explanation: The reverse pairs are:
-(1, 4) --> nums[1] = 4, nums[4] = 1, 4 > 2 * 1
-(2, 4) --> nums[2] = 3, nums[4] = 1, 3 > 2 * 1
-(3, 4) --> nums[3] = 5, nums[4] = 1, 5 > 2 * 1
+Input: s1 = "abcd", s2 = "dacb"
+Output: false
+Explanation: It is not possible to make the two strings equal.
+ 
+
+Constraints:
   """)
 # testcases(""" """, 2)
