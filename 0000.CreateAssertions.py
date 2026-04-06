@@ -66,31 +66,53 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "survivedRobotsHealths"
+name = "robotSim"
 func = ""
 func2 = ""
 formatLC("""
+ 1:
 
-Example 1:
+Input: commands = [4,-1,3], obstacles = []
 
+Output: 25
 
+Explanation:
 
-Input: positions = [5,4,3,2,1], healths = [2,17,9,15,10], directions = "RRRRR"
-Output: [2,17,9,15,10]
-Explanation: No collision occurs in this example, since all robots are moving in the same direction. So, the health of the robots in order from the first robot is returned, [2, 17, 9, 15, 10].
+The robot starts at (0, 0):
+
+Move north 4 units to (0, 4).
+Turn right.
+Move east 3 units to (3, 4).
+The furthest point the robot ever gets from the origin is (3, 4), which squared is 32 + 42 = 25 units away.
+
 Example 2:
 
+Input: commands = [4,-1,4,-2,4], obstacles = [[2,4]]
 
+Output: 65
 
-Input: positions = [3,5,2,6], healths = [10,10,15,12], directions = "RLRL"
-Output: [14]
-Explanation: There are 2 collisions in this example. Firstly, robot 1 and robot 2 will collide, and since both have the same health, they will be removed from the line. Next, robot 3 and robot 4 will collide and since robot 4's health is smaller, it gets removed, and robot 3's health becomes 15 - 1 = 14. Only robot 3 remains, so we return [14].
+Explanation:
+
+The robot starts at (0, 0):
+
+Move north 4 units to (0, 4).
+Turn right.
+Move east 1 unit and get blocked by the obstacle at (2, 4), robot is at (1, 4).
+Turn left.
+Move north 4 units to (1, 8).
+The furthest point the robot ever gets from the origin is (1, 8), which squared is 12 + 82 = 65 units away.
+
 Example 3:
 
+Input: commands = [6,-1,-1,6], obstacles = [[0,0]]
 
+Output: 36
 
-Input: positions = [1,2,5,6], healths = [10,10,11,11], directions = "RLRL"
-Output: []
-Explanation: Robot 1 and robot 2 will collide and since both have the same health, they are both removed. Robot 3 and 4 will collide and since both have the same health, they are both removed. So, we return an empty array, [].
+Explanation:
+
+The robot starts at (0, 0):
+
+Move north 6 units to (0, 6).
+Turn right.
   """)
 # testcases(""" """, 2)
