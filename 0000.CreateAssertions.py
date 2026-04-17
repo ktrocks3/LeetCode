@@ -66,53 +66,32 @@ def testcases(case: str, num: int):
         print(f'Solution().{name}({collected})')
 
 
-name = "robotSim"
+name = "closestTarget"
 func = ""
 func2 = ""
 formatLC("""
- 1:
+Example 1:
 
-Input: commands = [4,-1,3], obstacles = []
-
-Output: 25
-
-Explanation:
-
-The robot starts at (0, 0):
-
-Move north 4 units to (0, 4).
-Turn right.
-Move east 3 units to (3, 4).
-The furthest point the robot ever gets from the origin is (3, 4), which squared is 32 + 42 = 25 units away.
-
+Input: words = ["hello","i","am","leetcode","hello"], target = "hello", startIndex = 1
+Output: 1
+Explanation: We start from index 1 and can reach "hello" by
+- moving 3 units to the right to reach index 4.
+- moving 2 units to the left to reach index 4.
+- moving 4 units to the right to reach index 0.
+- moving 1 unit to the left to reach index 0.
+The shortest distance to reach "hello" is 1.
 Example 2:
 
-Input: commands = [4,-1,4,-2,4], obstacles = [[2,4]]
-
-Output: 65
-
-Explanation:
-
-The robot starts at (0, 0):
-
-Move north 4 units to (0, 4).
-Turn right.
-Move east 1 unit and get blocked by the obstacle at (2, 4), robot is at (1, 4).
-Turn left.
-Move north 4 units to (1, 8).
-The furthest point the robot ever gets from the origin is (1, 8), which squared is 12 + 82 = 65 units away.
-
+Input: words = ["a","b","leetcode"], target = "leetcode", startIndex = 0
+Output: 1
+Explanation: We start from index 0 and can reach "leetcode" by
+- moving 2 units to the right to reach index 2.
+- moving 1 unit to the left to reach index 2.
+The shortest distance to reach "leetcode" is 1.
 Example 3:
 
-Input: commands = [6,-1,-1,6], obstacles = [[0,0]]
-
-Output: 36
-
-Explanation:
-
-The robot starts at (0, 0):
-
-Move north 6 units to (0, 6).
-Turn right.
+Input: words = ["i","eat","leetcode"], target = "ate", startIndex = 0
+Output: -1
+Explanation: Since "ate" does not exist in words, we return -1.
   """)
 # testcases(""" """, 2)
